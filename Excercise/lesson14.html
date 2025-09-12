@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Position</title>
+    <style>
+        /* body {
+            height: 3000px;
+        }
+        
+        .position {
+            background-color: black;
+            color: white;
+            position: fixed;
+            left: 20px;
+            right: 20px;
+        } */
+        
+        div {
+            font-family: Arial;
+        }
+        
+        body {
+            height: 3000px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+        }
+        
+        .sidebar {
+            width: 100px;
+            height: 800px;
+            background-color: green;
+            position: fixed;
+            right: 0;
+            top: 0;
+        }
+        
+        .modal {
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .content {
+            background-color: white;
+            width: 300px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+            border-radius: 5px;
+        }
+        
+        .name {
+            font-weight: 700;
+            font-size: 28px;
+        }
+        
+        .text {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: rgb(155, 148, 148);
+            padding-top: 5px;
+        }
+        
+        .botton {
+            padding: 6px 10px 6px 10px;
+            background-color: grey;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="position">bottom right</div> -->
+    <div class="sidebar">sidebar</div>
+    <div class="modal">
+        <div class="content">
+            <div class="name">Modal Title</div>
+            <div class="text">this is a modal</div>
+            <button class="botton">Close</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Position Obsolute and Relative </title>
+    <style>
+        /* .absolute {
+            background-color: black;
+            color: white;
+            position: absolute;
+            padding: 5px 5px 5px 5px;
+            border-radius: 50%;
+            border: none;
+            right: 0;
+            margin-right: 50px;
+            margin-top: 50px;
+        } */
+        
+        body {
+            height: 3000px;
+        }
+        
+        .position-fixed {
+            right: 0;
+            margin: 50px 50px;
+            position: fixed;
+            background-color: rgb(181, 176, 176);
+            width: 320px;
+            height: 180px;
+        }
+        
+        .position-absolute {
+            background-color: black;
+            color: white;
+            position: absolute;
+            top: -18px;
+            left: -18px;
+            font-family: Arial;
+            font-size: 20px;
+            width: 45px;
+            aspect-ratio: 1 / 1;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        
+        .time {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: black;
+            padding: 6px 10px 6px 10px;
+            margin: 10px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <div class="absolute">
+        <button>x</button>
+    </div> -->
+
+    <div class="position-fixed">
+        <div class="position-absolute" title="back">X</div>
+        <div class="time" title="time">0:29</div>
+
+    </div>
+
+
+
+</body>
+
+</html>
+
+</html>

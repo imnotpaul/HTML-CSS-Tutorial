@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flexbox</title>
+    <style>
+        div {
+            font-family: Arial;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: rgb(120, 82, 178);
+            color: white;
+            align-items: center;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
+        .home {
+            font-weight: bold;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        
+        .search {
+            width: 500px;
+            /* max-width: 500px; */
+            margin-top: 12px;
+            margin-bottom: 12px;
+            padding-left: 20px;
+            border-radius: 30px;
+            border: none;
+            height: 30px;
+        }
+        
+        .search:focus {
+            outline: none;
+        }
+        
+        .button {
+            padding: 8px 15px 8px 15px;
+            font-size: 16px;
+            color: white;
+            border-color: white;
+            border-width: 1px;
+            border-style: solid;
+            background-color: transparent;
+            border-radius: 2px;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+        
+        button:hover {
+            background-color: rgb(135, 90, 201);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="home">Home</div>
+        <input type="text" placeholder="Search" class=" search">
+        <button class="button">Dowload</button>
+    </div>
+</body>
+
+</html>

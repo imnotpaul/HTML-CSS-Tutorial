@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <title>Document</title>
+    <style>
+        /* .group {
+            position: relative;
+            margin: 50px;
+        }
+        
+        input {
+            font-size: 16px;
+            padding: 10px 5px;
+            border: none;
+            border-bottom: 1px solid gray;
+            background-color: transparent;
+            outline: none;
+            color: grey;
+        }
+        
+        input:focus~label {
+            top: -10px;
+            font-size: 14px;
+            color: rgb(29, 155, 240);
+        }
+        
+        input:focus {
+            border-width: 2px;
+            border-bottom-color: rgb(29, 155, 240);
+        }
+        
+        label {
+            position: absolute;
+            left: 5px;
+            top: 10px;
+            color: gray;
+            pointer-events: none;
+            transition: 0.2s ease all;
+        } */
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background: #111111dc;
+            display: flex;
+            font-family: sans-serif;
+        }
+        
+        .scroll-container {
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .wrapper {
+            display: grid;
+            gap: 20px;
+            grid-auto-flow: column;
+            grid-auto-columns: 16rem;
+            justify-content: start;
+            animation: scroll 10s linear infinite;
+        }
+        
+        .wrapper img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        @keyframes scroll {
+            from {
+                transform: translate(0);
+            }
+            to {
+                transform: translateX(calc(-5 * 16rem));
+                /* scroll 5 items width */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="group">
+        <input type="email">
+        <label>Email</label> -->
+
+    <div class="scroll-container">
+        <div class="wrapper">
+            <!-- Original images -->
+            <img src="pictures/cat.jpg" alt="1">
+            <img src="pictures/david.jpg" alt="2">
+            <img src="pictures/jordi.jpg" alt="3">
+            <img src="pictures/ming.jpg" alt="4">
+            <img src="pictures/jordi.jpg" alt="5">
+
+            <!-- Duplicate for seamless infinite effect -->
+            <img src="pictures/cat.jpg" alt="1">
+            <img src="pictures/david.jpg" alt="2">
+            <img src="pictures/jordi.jpg" alt="3">
+            <img src="pictures/ming.jpg" alt="4">
+            <img src="pictures/jordi.jpg" alt="5">
+        </div>
+
+    </div>
+
+</body>
+
+</html>

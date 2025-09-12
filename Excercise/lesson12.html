@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flexbox</title>
+
+    <style>
+        /* div {
+            font-family: Arial;
+        }
+        
+        .container {
+            border-width: 1px;
+            border-style: solid;
+            border-color: grey;
+            border-radius: 6px;
+            width: 300px;
+        }
+        
+        .flex {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+        
+        .notif {
+            background-color: rgb(49, 109, 245);
+            color: white;
+            padding: 3px 10px 3px 10px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+        } */
+        
+        div {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        .header {
+            background-color: lightslategray;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            /* cleaner than margin juggling */
+            padding: 5px;
+        }
+        
+        .left,
+        .right {
+            background-color: lightblue;
+            flex-shrink: 0;
+            /* don’t shrink too much */
+            width: 150px;
+            /* can keep fixed width */
+            text-align: center;
+        }
+        
+        .right {
+            background-color: lightseagreen;
+            width: 200px;
+        }
+        
+        .middle {
+            background-color: lightpink;
+            flex: 1;
+            /* grow/shrink to fill available space */
+            max-width: 500px;
+            /* keep a nice limit */
+        }
+        
+        .search {
+            width: 100%;
+            /* take all space of middle */
+            margin-top: 12px;
+            margin-bottom: 12px;
+            padding-left: 20px;
+            border-radius: 30px;
+            border: none;
+            height: 30px;
+            box-sizing: border-box;
+        }
+        /* Optional: make layout stack on very small screens */
+        
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .left,
+            .right {
+                width: 100%;
+                /* full width on mobile */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div style="display:flex">
+        <div style="background-color: lightblue; width: 200px;">200px</div>
+        <div style="background-color: lightpink; width: 75px;">75px</div>
+    </div> -->
+
+    <!-- <div style="display:flex;
+    flex-direction: row;
+    height: 50px; ">
+        <div style="background-color: lightblue; width: 50px;">ITEM1</div>
+        <div style="background-color: lightpink; flex: 1">ITEM2</div>
+        <div style="background-color: lightblue; width: 75px;">ITEM3</div>
+    </div> -->
+
+    <!-- <div style="display:flex;
+    flex-direction: row;
+    height: 50px;
+    justify-content: space-between; ">
+    start, center, end 
+        <div style="background-color: lightblue; width: 50px;">ITEM1</div>
+        <div style="background-color: lightpink; width: 50px">ITEM2</div>
+        <div style="background-color: lightblue; width: 50px;">ITEM3</div>
+        <div style="background-color: lightpink; width: 50px;">ITEM4</div>
+    </div> -->
+
+    <!-- <div style="display:flex;
+    flex-direction: row;
+    height: 50px;
+    justify-content: space-between; 
+    border-width: 1px;
+    border-style: solid;
+    border-color: grey;
+    align-items: center;">
+        start, center, end - this work in justify-content: & align-items:
+
+        <div style="background-color: lightblue;">ITEM1</div>
+        <div style="background-color: lightpink;">ITEM2</div>
+        <div style="background-color: lightblue;">ITEM1</div>
+    </div> -->
+
+    <!-- <div class="container">
+        <div class="flex">
+            <div>Home</div>
+            <div class="notif">14</div>
+        </div>
+        <div class="flex">
+            <div>Notifications</div>
+            <div class="notif">3</div>
+        </div>
+        <div class="flex">
+            <div>Messages</div>
+            <div class="notif">5</div>
+        </div>
+    </div> -->
+
+
+
+    <div class="header">
+        <div class="left">Left Section</div>
+        <div class="middle">
+            <input type="text" placeholder="Middle Section" class="search">
+        </div>
+        <div class="right">Right Section</div>
+
+    </div>
+</body>
+
+</html>

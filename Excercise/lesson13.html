@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Nested Flexbox</title>
+    <style>
+        /* .flex {
+            display: flex;
+            height: 50px;
+        }
+        
+        .flex1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightblue;
+            width: 100px;
+        }
+        
+        .item {
+            background-color: black;
+            color: white;
+        }
+        
+        .flex2 {
+            background-color: lightseagreen;
+            width: 200px;
+        } */
+        
+        .flex {
+            display: flex;
+            height: 50px;
+            flex-direction: row;
+        }
+        
+        .column1 {
+            background-color: lightblue;
+            width: 100px;
+        }
+        
+        .column2 {
+            background-color: lightpink;
+            width: 200px;
+        }
+        
+        .row2 {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .item2 {
+            background-color: black;
+            color: white;
+        }
+        
+        .item3 {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="flex">
+        <div class="flex1">
+            <div class="item">Item1</div>
+        </div>
+        <div class="flex2"></div>
+    </div> -->
+
+    <div class="flex">
+        <div class="column1"></div>
+        <div class="column2">
+            <div>Row1</div>
+            <div class="row2">
+                <div class="item2 ">Row2</div>
+                <div class="item3 ">Row3</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

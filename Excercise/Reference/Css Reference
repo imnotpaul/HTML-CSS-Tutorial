@@ -1,0 +1,671 @@
+/* 
+/* ===================== FLEX CONTAINER ===================== */
+
+
+/* .flex {
+  display: flex;                   enable flex layout
+  flex-direction: row;             row | row-reverse | column | column-reverse
+  flex-wrap: nowrap;               nowrap | wrap | wrap-reverse
+  flex-flow: row nowrap;           shorthand: flex-direction + flex-wrap
+
+  justify-content: flex-start;     flex-start | flex-end | center | space-between | space-around | space-evenly
+  align-items: stretch;            stretch | flex-start | flex-end | center | baseline
+  align-content: stretch;          multi-line: flex-start | flex-end | center | space-between | space-around | stretch
+
+  gap: 1rem;                       spacing between items
+} */
+
+
+/* ===================== FLEX ITEMS ===================== */
+
+
+/* .flex-item {
+  order: 0;                         order in flex container
+  flex: 0 1 auto;                   shorthand: flex-grow, flex-shrink, flex-basis
+  flex-grow: 0;                     0 = don’t grow, 1+ = grow
+  flex-shrink: 1;                   0 = don’t shrink, 1 = shrink
+  flex-basis: auto;                 auto | % | px | content (rare)
+  align-self: auto;                 override container align-items per item
+  min-width: 0;                     prevent overflow in flex shrink
+  min-height: 0;                    prevent overflow in flex shrink
+} */
+
+
+/* ===================== ADVANCED / RARE FLEX ===================== */
+
+
+/* .flex-advanced {
+  flex-wrap: wrap-reverse;          reverse wrapping
+  flex-basis: content;              item sized to content (rare)
+  align-content: space-around;      multi-line spacing for nested flex
+  align-content: baseline;          uncommon, nested use
+} */
+
+
+/* ===================== GRID CONTAINER ===================== */
+
+
+/* .grid {
+  display: grid;                     enable grid layout */
+
+
+/* Explicit grid
+  grid-template-columns: 1fr 2fr;    columns
+  grid-template-rows: auto auto;     rows
+  grid-template-areas:
+    "header header"
+    "sidebar main";                  named areas */
+
+
+/* Implicit grid (rare)
+  grid-auto-columns: auto;           auto size for columns not defined
+  grid-auto-rows: auto;              auto size for rows not defined 
+  grid-auto-flow: row;               row | column | row dense | column dense (dense = rare)
+
+  gap: 1rem;                         shorthand row + column gap
+  row-gap: 1rem;                     
+  column-gap: 1rem; */
+
+
+/* Alignment
+  justify-items: stretch;             start | end | center | stretch 
+  align-items: stretch;               start | end | center | stretch 
+  justify-content: start;             start | end | center | stretch | space-between | space-around | space-evenly 
+  align-content: start;               start | end | center | stretch | space-between | space-around | space-evenly 
+  place-items: center;                shorthand: align-items + justify-items
+  place-content: center;              shorthand: align-content + justify-content
+} */
+
+
+/* ===================== GRID ITEMS ===================== */
+
+
+/* .grid-item {
+  grid-column: 1 / 3;                 start / end line or span 
+  grid-row: 2 / span 2;               start / span rows 
+  grid-area: header;                  match container template area 
+
+  justify-self: start;                override container justify-items 
+  align-self: start;                  override container align-items 
+  place-self: center;                 shorthand 
+
+  min-width: 0;                        prevent overflow 
+  min-height: 0;
+} */
+
+
+/* ===================== ADVANCED / RARE GRID ===================== */
+
+
+/* .grid-advanced {
+  subgrid: none;                         experimental / some browsers 
+  grid-auto-flow: dense;                 auto-fill holes in layout 
+  grid-column-start: col1;               named line placement 
+  grid-row-start: row2;                  named line placement 
+  grid-template-columns: repeat(3, minmax(100px, 1fr)); advanced fraction math 
+  grid-template-rows: minmax(50px, auto);   
+} */
+
+
+/* =================ADVANCED / RARE GRID MEANING ================== 
+*/
+
+
+/* minmax(50px, auto) -> row height min 50px, grows to fit content 
+subgrid -> inherit grid structure from parent (experimental) 
+grid-auto-flow: dense -> fill gaps automatically in grid layout 
+grid-column-start / grid-row-start -> place item at specific grid line 
+repeat(3, minmax(100px, 1fr)) -> 3 columns, each 100px min, flexible 1fr max  */
+
+
+/* position: static;       default, no movement
+position: relative;     move from normal spot
+position: absolute;     inside nearest parent
+position: fixed;        stays on screen
+position: sticky;       sticks on scroll
+
+z-index: 0;             behind
+z-index: 1;             middle
+z-index: 10;            front
+
+display: block;         full width box, takes up the entire line
+display: inline;        inline element, appear within a line of text
+display: inline-block;  inline + box, only takes up as much space as needed
+display: none;          hide
+display: flex;          flex layout
+display: grid;          grid layout
+
+justify-content: flex-start;     items left
+justify-content: center;         items center
+justify-content: flex-end;       items right
+justify-content: space-between;  space between
+justify-content: space-around;   space around
+justify-content: space-evenly;   space evenly
+
+align-items: flex-start;         top
+align-items: center;             center
+align-items: flex-end;           bottom
+align-items: stretch;            stretch
+align-items: baseline;           baseline
+
+flex-direction: row;             default horizontal
+flex-direction: row-reverse;     horizontal reversed
+flex-direction: column;          vertical
+flex-direction: column-reverse;  vertical reversed
+
+flex-wrap: nowrap;               single line
+flex-wrap: wrap;                 multiple lines
+flex-wrap: wrap-reverse;         multiple lines reversed
+
+align-content: flex-start;       top lines
+align-content: center;           center lines
+align-content: flex-end;         bottom lines
+align-content: space-between;    space between lines
+align-content: space-around;     space around lines
+align-content: space-evenly;     space evenly
+align-content: stretch;          stretch lines
+
+gap: 10px;                       space between rows/columns
+row-gap: 10px;                   space between rows
+column-gap: 10px;                space between columns
+
+grid-template-columns: 1fr 1fr 1fr;  three equal columns, 1fr-fre space take up the remaining space in the grid.
+grid-template-rows: auto auto;   two rows auto height
+grid-template-columns: repeat(3, 1fr);   three equal columns
+grid-template-rows: repeat(2, 200px);    two fixed rows
+grid-column: 1 / 3;              span two columns
+grid-row: 1 / 3;                 span two rows
+
+place-items: center;             align + justify center
+place-items: start;              align + justify start
+place-items: end;                align + justify end
+place-items: stretch;            align + justify stretch
+
+place-content: center;           align-content + justify-content center
+place-content: space-between;    align-content + justify-content space-between */
+
+
+/* box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.2);
+horizontal position, vertical position, blur, color */
+
+
+/* .form:active {
+    transform: translateY(2px);
+}
+translateY(2px) -Vertically (up/down) moves the element 2 pixels down from its current position
+tanslateX(2px) - Horizontally (left/right) moves the element 2 pixels to the right from its current position
+translateZ (2px) - Depth (forward/back) moves the element 2 pixels towards the viewer */
+
+
+/* 🔸 Font (Shorthand)
+Property:        font  
+Shorthand:       font: italic 600 20px/1 serif;  
+Expands To:      style: italic, weight: 600, size: 20px, line-height: normal (1), family: serif  
+
+🔸 Additional Common Font Shorthands
+If you want a few more valid combinations:
+font: normal 400 14px/1.6 'Helvetica', sans-serif;
+font: bold 18px/1.2 Arial;
+font: italic small-caps bold 16px/1.4 Georgia;
+
+🔸  Transition (Shorthand)
+Property:        transition  
+Shorthand:       transition: color 1s ease-in-out 0s;  
+Expands To:      property: color, duration: 1s, easing: ease-in-out, delay: 0s  
+
+🔸  Outline (Shorthand)
+Property:        outline  
+Shorthand:       outline: 2px dashed red;  
+Expands To:      width: 2px, style: dashed, color: red  
+
+🔸 Margin
+Property:        margin  
+Shorthand:       margin: 10px 20px;  
+Expands To:      top/bottom: 10px, left/right: 20px  
+
+🔸 Padding
+Property:        padding  
+Shorthand:       padding: 2px 3px 2px 3px;  
+Expands To:      top: 2px, right: 3px, bottom: 2px, left: 3px  
+
+All Sides:   padding: 10px;
+Top & Bottom / Left & Right:   padding: 10px 20px;
+Top / Left & Right / Bottom:   padding: 10px 20px 5px;
+Top / Right / Bottom / Left:   padding: 2px 3px 2px 3px;
+
+🔸 Border
+Property:        border  
+Shorthand:       border: 1px solid #000;  
+Expands To:      width: 1px, style: solid, color: black  
+
+🔸 Border Radius
+Property:        border-radius  
+Shorthand:       border-radius: 8px 4px;  
+Expands To:      top-left & bottom-right: 8px, top-right & bottom-left: 4px  
+
+🔸 Box Shadow
+Property:        box-shadow  
+Shorthand:       box-shadow: 0 2px 5px rgba(0,0,0,0.3);  
+Expands To:      offset-x: 0, offset-y: 2px, blur: 5px, color: rgba  
+
+🔸 Background
+Property:        background  
+Shorthand:       background: #000 url('img.jpg') no-repeat center/cover;  
+Expands To:      color, image, repeat, position, size  
+
+🔸 Font
+Property:        font  
+Shorthand:       font: italic bold 16px/1.5 Arial, sans-serif;  
+Expands To:      style, weight, size, line-height, font-family  
+
+🔸 Text
+Property:        text-decoration  
+Shorthand:       text-decoration: none underline wavy red;  
+Expands To:      line: none, decoration: underline, style: wavy, color: red  
+
+Property:        text-align  
+Shorthand:       text-align: center;  
+Expands To:      aligns text to center  
+
+🔸 List Style
+Property:        list-style  
+Shorthand:       list-style: square inside;  
+Expands To:      type: square, position: inside  
+
+🔸 Flex
+Property:        flex  
+Shorthand:       flex: 1 0 auto;  
+Expands To:      grow: 1, shrink: 0, basis: auto  
+
+Property:        flex-flow  
+Shorthand:       flex-flow: row wrap;  
+Expands To:      direction: row, wrap: wrap  
+
+🔸 Grid
+Property:        grid  
+Shorthand:       grid: auto / auto;  
+Expands To:      rows: auto, columns: auto  
+
+Property:        grid-template  
+Shorthand:       grid-template: 1fr 1fr / 1fr 2fr;  
+Expands To:      rows: 1fr 1fr, columns: 1fr 2fr  
+
+🔸 Transition
+Property:        transition  
+Shorthand:       transition: all 0.3s ease-in-out;  
+Expands To:      property: all, duration: 0.3s, easing: ease-in-out  
+
+🔸 Animation
+Property:        animation  
+Shorthand:       animation: slideIn 1s ease-in-out infinite;  
+Expands To:      name: slideIn, duration: 1s, timing: ease-in-out, loop: infinite  
+
+🔸 Positioning
+Property:        position  
+Shorthand:       position: absolute; top: 0; left: 0;  
+Expands To:      removes from flow, places at top-left  
+
+Property:        inset  
+Shorthand:       inset: 0 10px 20px 5px;  
+Expands To:      top: 0, right: 10px, bottom: 20px, left: 5px  
+
+🔸 Outline
+Property:        outline  
+Shorthand:       outline: 2px dashed red;  
+Expands To:      width: 2px, style: dashed, color: red  
+
+🔸 Overflow
+Property:        overflow  
+Shorthand:       overflow: hidden auto;  
+Expands To:      overflow-x: hidden, overflow-y: auto  
+  
+🔸 Columns (Multi-Column Layout)
+Property:        columns  
+Shorthand:       columns: 200px 2;  
+Expands To:      width: 200px, count: 2 columns 
+
+🔸 Object Fit
+Property:        object  
+Shorthand:       object: cover center;  
+Expands To:      fit: cover, position: center
+
+ 🔸Object Fit (for <img>, <video>, etc.)
+object-fit: fill; → squishes/stretch image to container.
+contain → whole image visible, may add gaps.
+cover → fills container fully, crops overflow.
+none → ignores container, shows original size.
+scale-down → picks whichever is smaller (none vs contain).
+
+🔸 Utility Class Examples
+You can use these in your custom class names:
+.m-1        => margin: 10px;
+.mt-1       => margin-top: 10px;
+.mb-1       => margin-bottom: 10px;
+.p-1        => padding: 10px;
+.text-center => text-align: center;
+.w-100      => width: 100%;
+.h-100      => height: 100%;
+.d-flex     => display: flex;
+.d-grid     => display: grid;
+.hidden     => display: none;
+
+🔸Add Path Images in <Head> Section 
+<base href="images/"> - Makes all image paths relative to /images/ folder 
+
+<body>
+  <div class="container"> - You can add p-1 - padding/margin, grid or flex.
+    <img src="img1.jpg">
+    <img src="img2.jpg">
+    <img src="img3.jpg">
+    <img src="img4.jpg">
+  </div>
+</body>
+
+
+/* ✅ COLORS */
+
+color: red;
+
+/* text color */
+
+background-color: #f5f5f5;
+
+/* background fill */
+
+opacity: 0.5;
+
+/* transparency (0=hidden, 1=visible) */
+
+
+/* ✅ DIMENSIONS */
+
+width: 100px;
+
+/* fixed width */
+
+height: 200px;
+
+/* fixed height */
+
+min-width: 300px;
+
+/* minimum width */
+
+max-width: 1200px;
+
+/* maximum width */
+
+min-height: 100px;
+
+/* minimum height */
+
+max-height: 500px;
+
+/* maximum height */
+
+aspect-ratio: 16/9;
+
+/* lock element ratio (modern browsers) */
+
+
+/* ✅ BACKGROUND EXTRAS */
+
+background-clip: content-box;
+
+/* where bg is painted */
+
+background-attachment: fixed;
+
+/* scroll vs fixed bg */
+
+background-origin: border-box;
+
+/* where bg starts (border, padding, content) */
+
+
+/* ✅ BORDER EXTRAS */
+
+border-style: dashed solid dotted double;
+border-width: 2px 4px;
+
+/* top/bottom 2px, left/right 4px */
+
+border-color: red blue;
+
+/* top/bottom red, left/right blue */
+
+border-collapse: collapse;
+
+/* for tables */
+
+border-spacing: 5px;
+
+/* spacing between table cells */
+
+
+/* ✅ TEXT */
+
+text-transform: uppercase;
+
+/* uppercase, lowercase, capitalize */
+
+text-overflow: ellipsis;
+
+/* … for overflow */
+
+white-space: nowrap;
+
+/* prevent wrapping */
+
+word-wrap: break-word;
+
+/* break long words */
+
+word-spacing: 5px;
+
+/* extra space between words */
+
+letter-spacing: 2px;
+
+/* spacing between letters */
+
+line-height: 1.6;
+
+/* vertical spacing between lines */
+
+
+/* ✅ CURSOR & POINTER */
+
+cursor: pointer;
+
+/* clickable */
+
+cursor: not-allowed;
+
+/* disabled state */
+
+cursor: grab;
+
+/* draggable */
+
+
+/* ✅ FILTERS & EFFECTS */
+
+filter: blur(5px);
+
+/* blur */
+
+filter: brightness(1.2);
+
+/* increase brightness */
+
+filter: grayscale(100%);
+
+/* black & white */
+
+filter: drop-shadow(2px 4px 6px black);
+
+/* shadow effect */
+
+
+/* ✅ CLIP & MASK */
+
+clip-path: circle(50%);
+
+/* crop into a circle */
+
+mask-image: url(mask.svg);
+
+/* advanced masking */
+
+
+/* ✅ TRANSFORMS (3D & EXTRA) */
+
+transform: rotate(45deg);
+
+/* rotation */
+
+transform: scale(1.2);
+
+/* zoom */
+
+transform: skew(20deg, 10deg);
+
+/* skew distort */
+
+transform-style: preserve-3d;
+
+/* for nested 3D */
+
+perspective: 1000px;
+
+/* 3D depth */
+
+backface-visibility: hidden;
+
+/* hide backside in 3D */
+
+
+/* ✅ SCROLLING */
+
+overflow-x: auto;
+
+/* horizontal scroll */
+
+overflow-y: scroll;
+
+/* vertical scroll */
+
+scroll-behavior: smooth;
+
+/* smooth scroll */
+
+scroll-snap-type: x mandatory;
+
+/* snap scrolling */
+
+scroll-snap-align: start;
+
+/* snap position */
+
+
+/* ✅ TRANSITIONS & ANIMATIONS EXTRAS */
+
+will-change: transform,
+opacity;
+
+/* hint for performance */
+
+transform-origin: center top;
+
+/* pivot for transforms */
+
+animation-fill-mode: forwards;
+
+/* retain end state */
+
+animation-delay: 0.5s;
+
+/* delay before animation starts */
+
+animation-direction: alternate;
+
+/* forward + backward */
+
+
+/* ✅ MEDIA & RESPONSIVE */
+
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column;
+    }
+}
+
+@supports (display: grid) {
+    .grid {
+        display: grid;
+    }
+}
+
+
+/* ✅ VARIABLES (CUSTOM PROPERTIES) */
+
+:root {
+    --main-color: #3498db;
+    --spacing: 10px;
+}
+
+.box {
+    color: var(--main-color);
+    margin: var(--spacing);
+}
+
+
+/* ✅ POINTER EVENTS & USER SELECT */
+
+pointer-events: none;
+
+/* disable clicks */
+
+user-select: none;
+
+/* prevent text selection */
+
+
+/* ✅ VISIBILITY */
+
+visibility: hidden;
+
+/* hidden but keeps layout */
+
+display: none;
+
+/* hidden, removes from layout */
+
+
+/* ✅ OBJECT & MEDIA QUERIES */
+
+object-position: center top;
+
+/* control image position */
+
+aspect-ratio: 4/3;
+
+/* responsive media scaling */
+
+
+/* ✅ MISC */
+
+isolation: isolate;
+
+/* create new stacking context */
+
+mix-blend-mode: multiply;
+
+/* blend with bg */
+
+backdrop-filter: blur(10px);
+
+/* glassmorphism */
+
+*/

@@ -1,0 +1,234 @@
+<!-- Hover, Transition, Shadow -->
+
+<!-- <style>
+        .request {
+        background-color: black;
+        color: white;
+        border: none;
+        height: 40px;
+        width: 110px;
+        cursor: pointer;
+        margin-right: 8px;
+        transition: opacity 0.15s;
+    }
+    
+    .request:hover {
+        opacity: 0.8;
+    }
+    
+    .request:active {
+        opacity: 0.5;
+    }
+    
+    .add {
+        background-color: rgb(255, 216, 20);
+        border: none;
+        height: 36px;
+        width: 160px;
+        border-radius: 17px;
+        font-size: 16px;
+        font-weight: light;
+        cursor: pointer;
+        transition: background-color 0.15s;
+    }
+    
+    .add:hover {
+        background-color: rgb(227, 202, 41);
+    }
+    
+    .add:active {
+        background-color: rgb(204, 182, 37);
+    }
+    
+    .sign {
+        background-color: rgb(46, 164, 79);
+        color: white;
+        border: none;
+        height: 40px;
+        width: 100px;
+        border-radius: 5px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-left: 8px;
+        margin-right: 8px;
+        transition: box-shadow 0.15s, transform 0.15s;
+    }
+    
+    .sign:hover {
+        box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.2);
+        /* horizontal position, vertical position, blur, color */
+    }
+    
+    .sign:active {
+        box-shadow: none;
+        transform: translateY(2px);
+        /* translateY(2px)Vertically (up/down) moves the element 2 pixels down from its current position */
+        /* tanslateX(2px)Horizontally (left/right) moves the element 2 pixels to the right from its current position */
+        /* translateZ (2px)Depth (forward/back) moves the element 2 pixels towards the viewer */
+        }
+    
+    .started {
+        background-color: rgb(121, 82, 179);
+        color: white;
+        border: none;
+        height: 40px;
+        width: 110px;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.15s;
+    }
+    
+    .started:hover {
+        background-color: rgb(100, 68, 158);
+    }
+    
+    .dowload {
+        background-color: white;
+        color: rgb(108, 117, 125);
+        border-color: rgb(108, 117, 125);
+        border-style: solid;
+        /* border-width: 1px; */
+        height: 40px;
+        width: 110px;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-left: 8px;
+        transition: background-color 0.15s, color 0.15s;
+    }
+    
+    .dowload:hover {
+        background-color: rgb(108, 117, 125);
+        color: white;
+    }
+    
+    .apply {
+        background-color: rgb(10, 102, 194);
+        color: white;
+        border: none;
+        height: 43px;
+        width: 240px;
+        border-radius: 25px;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+        margin-top: 8px;
+        transition: background-color 0.15s;
+    }
+    
+    .apply:hover {
+        background-color: rgb(10, 87, 164);
+    }
+    
+    .save {
+        background-color: white;
+        color: rgb(10, 102, 194);
+        border-color: rgb(10, 102, 194);
+        border-style: solid;
+        height: 43px;
+        width: 90px;
+        border-radius: 22.5px;
+        font-weight: bolder;
+        font-size: 18px;
+        cursor: pointer;
+        margin-left: 8px;
+        transition: background-color 0.15s,
+          border-width 0.15s;
+    }
+    
+    .save:hover {
+        background-color: rgb(226, 240, 254);
+        border-width: 2px;
+</style>
+
+
+
+<button class="request">Request now</button>
+<button class="add">Add to cart</button>
+<button class="sign">Sign up</button>
+<button class="started">Get started</button>
+<button class="dowload">Dowload</button>
+<button class="apply">Apply on company website</button>
+<button class="save">Save</button> -->
+
+<style>
+    p {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    .amazon {
+        color: rgb(0, 113, 133);
+        font-weight: bold;
+        font-size: 20px;
+    }
+    
+    .nike {
+        font-size: 35px;
+        font-weight: bold;
+    }
+    
+    .price {
+        color: rgb(0, 118, 0);
+        font-weight: bold;
+        font-size: 20px;
+    }
+    
+    .free {
+        font-weight: bold;
+        font-size: 20px;
+    }
+    
+    .add {
+        background-color: rgb(255, 216, 20);
+        border: none;
+        height: 35px;
+        width: 130px;
+        border-radius: 20px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    .add:hover {
+        background-color: rgb(227, 202, 41);
+        transform: rotateX(360deg);
+        transition: transform 1s;
+    }
+    
+    .add:active {
+        transform: translateX(3px);
+    }
+    
+    .buy {
+        background-color: rgb(255, 164, 28);
+        border: none;
+        height: 35px;
+        width: 130px;
+        border-radius: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        margin-left: 8px;
+    }
+    
+    .buy:hover {
+        background-color: rgb(255, 140, 0);
+        transform: rotateY(360deg);
+        transition: transform 1s;
+    }
+    
+    .buy:active {
+        transform: translateX(-3px);
+    }
+</style>
+
+
+
+<a href="https://www.youtube.com/watch?v=G3e-cpL7ofc" target="_blank" class="amazon">Back to Amazon</a>
+
+<P class="nike">Nike Black Running Shoes</P>
+<p class="price">$39 - in stock</p>
+<p class="free">free delivery</p>
+
+<button class="add">Add to cart</button>
+<button class="buy">Buy now</button>

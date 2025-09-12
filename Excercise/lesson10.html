@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+</html>
+
+<head>
+    <title>Nested Layout Technique</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .ming {
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            vertical-align: 5%;
+            object-fit: fill;
+        }
+        
+        .cat {
+            display: inline-block;
+        }
+        
+        .names {
+            display: inline-block;
+            width: 200px;
+            margin-left: 10px;
+        }
+        
+        .name,
+        .cats,
+        .pop {
+            margin: 0px 0px;
+            font-size: 15px;
+        }
+        
+        .name {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 5px;
+            margin-bottom: 5px
+        }
+        
+        .cats {
+            color: grey;
+            margin-bottom: 5px;
+        }
+        
+        .pop {
+            color: grey;
+        }
+        
+        .follow {
+            display: inline-block;
+            vertical-align: 140%;
+        }
+        
+        .now {
+            background-color: rgb(66, 190, 240);
+            color: white;
+            border: none;
+            padding: 10px 15px 10px 15px;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 20px;
+            transition: background-color 0.2s ease;
+        }
+        
+        .now:hover {
+            background-color: rgb(62, 169, 211);
+        }
+        
+        .now:focus {
+            outline: 2px solid rgb(66, 190, 240);
+            /* outline-size solid color */
+            outline-offset: 2px;
+            /* Draw the outline 2px away from the element’s border edge. */
+        }
+        
+        .content0 {
+            margin-bottom: 5px;
+        }
+        
+        .content1 {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content0">
+        <div class="cat">
+            <img class="ming" src="pictures/ming.jpg" alt="cat">
+        </div>
+
+        <div class="names">
+            <p class="name">Ming</p>
+            <p class="cats">The Cat</p>
+            <p class="pop">Popular</p>
+        </div>
+
+        <div class="follow">
+            <button class="now">Follow</button>
+        </div>
+    </div>
+
+    <div class="content1">
+        <div class="cat">
+            <img class="ming" src="pictures/jordi.jpg" alt="cat">
+        </div>
+
+        <div class="names">
+            <p class="name">Jordi</p>
+            <p class="cats">My Dog</p>
+            <p class="pop">Protective</p>
+        </div>
+
+        <div class="follow">
+            <button class="now">Follow</button>
+        </div>
+    </div>
+
+    <div class="content2">
+        <div class="cat">
+            <img class="ming" src="pictures/david.jpg" alt="cat">
+        </div>
+
+        <div class="names">
+            <p class="name">David</p>
+            <p class="cats">My Brother</p>
+            <p class="pop">Money Guy</p>
+        </div>
+
+        <div class="follow">
+            <button class="now">Follow</button>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nested Layout Technique</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .content {
+      display: flex;
+      align-items: center; /* vertical centering */
+      gap: 15px; /* space between elements */
+      padding: 10px;
+    }
+
+    .ming {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%; /* perfect circle */
+      object-fit: cover;  /* keeps aspect ratio */
+    }
+
+    .names {
+      flex-grow: 1; /* take available space */
+    }
+
+    .name {
+      font-weight: bold;
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .cats,
+    .pop {
+      color: grey;
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .now {
+      background-color: rgb(66, 190, 240);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .now:hover {
+      background-color: rgb(40, 160, 210);
+    }
+
+    .now:focus {
+      outline: 2px solid rgb(66, 190, 240);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <img class="ming" src="pictures/ming.jpg" alt="Profile picture of Ming the cat">
+
+    <div class="names">
+      <p class="name">Ming</p>
+      <p class="cats">The Cat</p>
+      <p class="pop">Popular</p>
+    </div>
+
+    <button class="now">Follow</button>
+  </div>
+</body>
+</html> -->
+
+</html> -->

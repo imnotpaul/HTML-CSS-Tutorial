@@ -1,0 +1,130 @@
+       /* .name,
+        .email {
+            display: block;
+            margin-bottom: 5px;
+        } */
+       /* .text {
+            width: 200px;
+            display: inline-block;
+            vertical-align: middle;
+        } */
+       /* .google {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+        } */
+       /* .type {
+            font-size: 15px;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 90px;
+            width: 300px;
+            padding: 10px 180px 10px 20px;
+            margin-top: -50px;
+            object-fit: contain;
+            border-radius: 50px;
+            border: solid rgb(251, 243, 243);
+            box-shadow: 10px 10px 20px rgba(166, 154, 154, 0.32);
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .type:focus {
+            outline: none;
+            border: 1px solid rgb(170, 156, 156);
+            border-radius: 30px; */
+       /* Blue border on click (focus) */
+       /* }
+        
+        .type:hover {
+            background-color: rgb(220, 214, 214);
+        } */
+       /* .name,
+        .last-name {
+            width: 140px;
+            padding: 10px 5px 10px 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            border-style: solid;
+            border-color: rgb(225, 219, 219);
+        }
+        
+        .gmail {
+            margin-top: 5px;
+            width: 297px;
+            padding: 10px 5px 10px 5px;
+            display: block;
+            border-radius: 5px;
+            border-style: solid;
+            border-color: rgb(225, 219, 219);
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+        
+        .sign {
+            background-color: rgb(91, 91, 251);
+            color: white;
+            font-size: 15px;
+            width: 310px;
+            padding: 15px 5px 15px 5px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .sign:hover {
+            background-color: rgb(79, 79, 250);
+        } */
+       
+       p {
+           font-family: 'Times New Roman', Times, serif;
+       }
+       
+       .now {
+           font-size: 40px;
+           font-weight: bold;
+           border-radius: 5px;
+           margin-top: 10px;
+           margin-bottom: 30px;
+       }
+       
+       .location,
+       .destination {
+           display: block;
+           width: 350px;
+           padding: 10px 10px 10px 10px;
+           margin-bottom: 5px;
+       }
+       
+       .location:focus {
+           outline: none;
+           border: 1px solid rgb(170, 156, 156);
+       }
+       
+       .destination:focus {
+           outline: none;
+           border: 1px solid rgb(170, 156, 156);
+       }
+       
+       .request {
+           background-color: black;
+           color: white;
+           border: none;
+           padding: 12px 10px 12px 10px;
+           font-size: 15;
+           margin-top: 30px;
+           margin-right: 15px;
+           margin-left: 65px;
+           cursor: pointer;
+       }
+       
+       .schedule {
+           background-color: rgb(240, 230, 230);
+           color: black;
+           border: none;
+           padding: 12px 10px 12px 10px;
+           font-size: 15;
+           cursor: pointer;
+       }

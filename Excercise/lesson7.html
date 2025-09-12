@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Images & Text Boxes</title>
+
+    <style>
+        /* .cat {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            cover, contain
+            object-position: left;
+            top, bottom, left, right
+            border-width: 10px;
+            border-style: solid;
+            border-color: red green blue yellow;
+        } */
+        /* .cat {
+            width: 200px;
+            border-radius: 20px;
+            margin-left: 20px;
+            margin-top: 20px
+        } */
+        /* .cat {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+            margin: 20px 20px;
+        }
+         */
+        /* .cat {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            object-position: left;
+            border-radius: 500px;
+        } */
+        /* .search {
+            margin-left: 10px;
+            margin-top: 10px;
+            padding: 10px 20px 10px 10px;
+            border-radius: 5px;
+            border: solid grey;
+        } */
+        /* .search {
+            border: solid whitesmoke;
+            width: 350px;
+            margin-left: 10px;
+            margin-top: 10px;
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 15px;
+            font-size: 14px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+        } */
+        
+        .email {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            color: grey
+        }
+        
+        .search {
+            width: 250px;
+            padding: 5px 5px;
+            border-radius: 3px;
+            border: 1px solid grey;
+            /* thin, solid and color */
+        }
+        
+        .search:focus {
+            border-color: grey;
+            /* change border color when clicked */
+            outline: none;
+            /* remove default blue outline */
+            box-shadow: 0 0 3px black;
+            /* optional subtle glow */
+        }
+        
+        .agree {
+            color: grey;
+            width: 260px;
+        }
+        
+        .join {
+            width: 260px;
+            padding: 10px 5px;
+            border-radius: 100px;
+            border: none;
+            color: white;
+            background-color: rgb(11, 101, 197);
+            cursor: pointer;
+            transition: background-color 0.15s ease, box-shadow 0.15s ease;
+            /* linear       – same speed start to end (robotic) */
+            /* ease         – slow start & end, fast middle (natural) */
+            /* ease-in      – slow start, fast end */
+            /* ease-out     – fast start, slow end */
+            /* ease-in-out  – slow start & end, fast middle (smooth) */
+            /* cubic-bezier – custom speed control (advanced) */
+            /* steps(n)     – jumps in n steps (typewriter or sprite effect) */
+        }
+        
+        .join:hover {
+            background-color: rgb(11, 107, 210);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+        }
+        
+        .join:active {
+            background-color: rgb(34, 127, 226);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <img class="cat" src="pictures/cat.jpg" alt="cat"> -->
+    <p class="email">Email</p>
+    <input class="search" type="text" placeholder="Search for you">
+    <p class="agree">By Clicking Agree & Join, you agree to the Privacy Policy.</p>
+    <button class="join">Agree & Join</button>
+
+</body>
+
+
+
+</html>

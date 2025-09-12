@@ -1,0 +1,60 @@
+/* Styles for the text elements */
+
+p {
+    font-family: 'Montserrat';
+    ;
+}
+
+.new {
+    color: red;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.mac {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.charged {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 0px;
+}
+
+.price {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.buy {
+    background-color: rgb(58, 98, 228);
+    color: white;
+    border: none;
+    border-radius: 18px;
+    padding: 10px 18px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.buy:hover {
+    background-color: rgb(36, 72, 199);
+    cursor: pointer;
+}
+
+.buy:active {
+    background-color: rgb(23, 48, 132);
+    transform: scale(0.98);
+}

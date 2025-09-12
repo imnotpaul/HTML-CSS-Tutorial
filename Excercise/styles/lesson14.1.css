@@ -1,0 +1,70 @@
+  div {
+      font-family: Arial;
+  }
+  
+  body {
+      height: 3000px;
+  }
+  
+  .sidebar {
+      position: fixed;
+      background-color: rgb(36, 35, 35);
+      min-height: 300px;
+      width: 80px;
+      left: 0;
+      top: 0;
+  }
+  
+  .sidebar-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 15px;
+  }
+  
+  .pictures {
+      aspect-ratio: 1 / 1;
+      /* aspect-ratio: 1 / 1; → width and height are always equal (a square).
+            aspect-ratio: 16 / 9; → widescreen rectangle (like YouTube videos).
+            aspect-ratio: 4 / 3; → old TV format. */
+      width: 50px;
+      object-fit: cover;
+      border-radius: 25px;
+      margin-bottom: 5px;
+  }
+  
+  .sidebar-info {
+      position: fixed;
+      background-color: rgb(54, 50, 50);
+      width: 180px;
+      min-height: 300px;
+      /* min-height is flexible → prevents content from being cut off. it grows if needed */
+      inset: 0 auto auto 80px;
+      /* inset: 10px; -> all sides
+              inset: 10px 20px;  -> top/bottom | right/left
+              inset: 5px 15px 0; -> top | right/left | bottom
+              inset: 0 auto auto 80px; -> top | right | bottom | left */
+  }
+  
+  .info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 15px 18px 5px 10px;
+  }
+  
+  .about {
+      color: white;
+      font-size: 14px;
+  }
+  
+  .symbol {
+      color: rgb(157, 154, 154);
+      font-size: 30px;
+  }
+  
+  .hashtags {
+      font-size: 16px;
+      color: rgb(157, 154, 154);
+      margin: 0 0 15px 10px;
+  }

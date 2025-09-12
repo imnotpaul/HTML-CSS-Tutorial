@@ -1,0 +1,77 @@
+p {
+    font-family: Arial;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.social {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+.picture {
+    width: 200px;
+    height: 200px;
+    object-fit: fill;
+    margin-bottom: 12px;
+}
+
+.picture1 {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-left: 8px;
+}
+
+.mutual {
+    margin-left: 8px;
+    margin-bottom: 10px;
+}
+
+.animals {
+    height: 28px;
+    width: 28px;
+    object-fit: cover;
+    border-radius: 14px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.friends {
+    color: rgb(142, 139, 139);
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.add {
+    background-color: rgb(55, 102, 243);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px 10px 20px;
+    margin-left: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+.add:hover {
+    background-color: rgb(48, 91, 220);
+}
+
+.add:active {
+    background-color: rgb(49, 96, 237);
+}

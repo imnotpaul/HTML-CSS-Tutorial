@@ -1,0 +1,195 @@
+<!-- ✅ EMMET SHORTCUTS CHEAT SHEET -->
+
+<!-- CLASS & ID -->
+.box →
+<div class="box"></div>
+#main →
+<div id="main"></div>
+div#app →
+<div id="app"></div>
+span.item → <span class="item"></span>
+
+<!-- MULTIPLY -->
+div*3 → 3 divs .card*4 → 4 divs with class="card"
+
+<!-- CHILD (>) -->
+div>p →
+<div>
+    <p></p>
+</div>
+ul>li*3 → list with 3 items
+
+<!-- SIBLING (+) -->
+h1+p →
+<h1></h1>
+<p></p>
+div+span →
+<div></div><span></span>
+
+<!-- CLIMB UP (^) -->
+div>p>span^a →
+<div>
+    <p><span></span></p>
+    <a></a>
+</div>
+
+<!-- GROUPING ( ) -->
+div>(header>ul>li*2)+footer →
+<div>
+    <header>
+        <ul>
+            <li></li>
+            <li></li>
+        </ul>
+    </header>
+    <footer></footer>
+</div>
+
+<!-- NUMBERING ($) -->
+.item$*3 →
+<div class="item1"></div>
+<div class="item2"></div>
+<div class="item3"></div>
+
+ul>li.item$*3 →
+<ul>
+    <li class="item1"></li>
+    <li class="item2"></li>
+    <li class="item3"></li>
+</ul>
+
+<!-- TEXT CONTENT ({}) -->
+a{Click me} → <a href="">Click me</a> p{Hello World} →
+<p>Hello World</p>
+
+<!-- ATTRIBUTES ([]) -->
+input[type=text] → <input type="text"> img[src=img.jpg alt=photo] → <img src="img.jpg" alt="photo">
+
+<!-- COMBO EXAMPLES -->
+div>.column*2>.box*2 →
+<div>
+    <div class="column">
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="column">
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</div>
+
+<!-- ✅ FULL HTML TAG REFERENCE CHEAT SHEET -->
+
+<!-- 🔹 STRUCTURE
+<!DOCTYPE html>   = HTML5 declaration
+<html>           = Root element
+<head>           = Metadata container
+<title>          = Page title (browser tab)
+<meta>           = Metadata (charset, viewport, SEO)
+<link>           = External resource (CSS, favicon)
+<style>          = Internal CSS
+<script>         = JavaScript
+<body>           = Main content container
+
+🔹 TEXT & CONTENT
+<h1>–<h6>        = Headings
+<p>              = Paragraph
+<span>           = Inline container
+<div>            = Block container
+<strong>         = Important (semantic bold)
+<em>             = Emphasis (semantic italic)
+<b>              = Bold (visual only)
+<i>              = Italic (visual only)
+<u>              = Underline
+<mark>           = Highlighted
+<small>          = Smaller text
+<sup>            = Superscript
+<sub>            = Subscript
+<abbr>           = Abbreviation (with title attr)
+<q>              = Inline quotation
+<blockquote>     = Block quotation
+<code>           = Inline code
+<pre>            = Preformatted text
+<hr>             = Horizontal rule
+<br>             = Line break
+
+🔹 LISTS
+<ul>             = Unordered list
+<ol>             = Ordered list
+<li>             = List item
+<dl>             = Definition list
+<dt>             = Definition term
+<dd>             = Definition description
+
+🔹 LINKS & MEDIA
+<a>              = Anchor link (href, target)
+<img>            = Image (src, alt)
+<figure>         = Semantic media container
+<figcaption>     = Caption for <figure>
+<video>          = Video player
+<audio>          = Audio player
+<source>         = Media source (inside video/audio)
+<track>          = Subtitles for video/audio
+<iframe>         = Inline frame (embed another page)
+<embed>          = Embed external content
+<object>         = Embed object (PDF, Flash, etc.)
+<canvas>         = Drawing canvas (JS graphics)
+<svg>            = Vector graphics
+<map>            = Image map
+<area>           = Clickable area inside map
+
+🔹 FORMS
+<form>           = Form container
+<input>          = Input field (text, email, password…)
+<textarea>       = Multiline input
+<button>         = Clickable button
+<label>          = Label for input
+<select>         = Dropdown
+<option>         = Option in dropdown
+<optgroup>       = Grouped options
+<fieldset>       = Group of form fields
+<legend>         = Title for <fieldset>
+<datalist>       = Autocomplete options
+<output>         = Calculation output
+<meter>          = Gauge / measurement
+<progress>       = Progress bar
+
+🔹 TABLES
+<table>          = Table container
+<caption>        = Table title
+<thead>          = Table header group
+<tbody>          = Table body
+<tfoot>          = Table footer
+<tr>             = Table row
+<th>             = Table header cell
+<td>             = Table data cell
+<colgroup>       = Group of columns
+<col>            = Column properties
+
+🔹 SEMANTIC HTML5
+<header>         = Page/header section
+<footer>         = Footer section
+<nav>            = Navigation
+<main>           = Main content
+<article>        = Independent content
+<section>        = Thematic grouping
+<aside>          = Sidebar / extra content
+<address>        = Contact info
+<time>           = Date/time
+<details>        = Expandable content
+<summary>        = Summary/title for <details>
+<dialog>         = Modal dialog box
+
+🔹 SCRIPTING
+<script>         = JavaScript
+<noscript>       = Fallback if JS disabled
+<template>       = Hidden HTML template
+<slot>           = Web component slot
+
+📖 Docs for deep reference:
+MDN HTML Reference
+WHATWG HTML Standard
+
+🔹 MISC
+<!-- comment -->= Comment
+<base> = Base URL for links -->
