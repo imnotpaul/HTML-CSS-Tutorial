@@ -1,195 +1,491 @@
-<!-- ✅ EMMET SHORTCUTS CHEAT SHEET -->
+<!-- ============================
+     📄 HTML5 CHEAT SHEET (2025)
+     ============================ -->
 
+<!-- 🌍 Document Basics -->
+<!DOCTYPE html> <!-- Defines HTML5 document -->
+<html> <!-- Root element -->
+<head> <!-- Document head (metadata, title, links) -->
+  <title> <!-- Page title (shown in browser tab) --> </title>
+  <meta> <!-- Metadata (charset, viewport, SEO info) -->
+  <link> <!-- External resource (CSS, icons, etc.) -->
+  <style> <!-- Internal CSS styles --> </style>
+  <script> <!-- JavaScript code or reference --> </script>
+  <noscript> <!-- Fallback if JS disabled --> </noscript>
+  <base> <!-- Base URL for all relative links -->
+</head>
+<body> <!-- Document body (all visible content) -->
+
+<!-- 📰 Structure & Sections -->
+<header> <!-- Intro/header section -->
+<nav> <!-- Navigation links -->
+<main> <!-- Main page content -->
+<section> <!-- Generic section -->
+<article> <!-- Independent article/post -->
+<aside> <!-- Sidebar/secondary info -->
+<footer> <!-- Footer section -->
+
+<!-- 📑 Text Content -->
+<h1> ... <h6> <!-- Headings (levels 1–6) -->
+<p> <!-- Paragraph -->
+<br> <!-- Line break -->
+<hr> <!-- Horizontal line -->
+<pre> <!-- Preformatted text -->
+<blockquote> <!-- Long quotation -->
+<q> <!-- Short inline quote -->
+<address> <!-- Contact/address info -->
+<cite> <!-- Citation -->
+<code> <!-- Inline code -->
+<samp> <!-- Sample output -->
+<kbd> <!-- Keyboard input -->
+<var> <!-- Variable -->
+<abbr> <!-- Abbreviation -->
+<dfn> <!-- Definition term -->
+<mark> <!-- Highlighted text -->
+<strong> <!-- Strong emphasis -->
+<em> <!-- Emphasized text -->
+<b> <!-- Bold (no semantic importance) -->
+<i> <!-- Italic (no semantic importance) -->
+<u> <!-- Underlined text -->
+<s> <!-- Strikethrough (no longer valid) -->
+<small> <!-- Small text -->
+<ins> <!-- Inserted text -->
+<del> <!-- Deleted text -->
+<time> <!-- Date/Time -->
+<wbr> <!-- Word break opportunity -->
+
+<!-- 📊 Lists -->
+<ul> <!-- Unordered list -->
+<ol> <!-- Ordered list -->
+<li> <!-- List item -->
+<dl> <!-- Definition list -->
+<dt> <!-- Definition term -->
+<dd> <!-- Definition description -->
+<menu> <!-- Menu list -->
+<menuitem> <!-- Menu command -->
+
+<!-- 🎛 Forms & Inputs -->
+<form> <!-- Form container -->
+<input> <!-- Input field -->
+<textarea> <!-- Multi-line input -->
+<button> <!-- Clickable button -->
+<select> <!-- Drop-down -->
+<option> <!-- Drop-down option -->
+<optgroup> <!-- Group of options -->
+<label> <!-- Label for input -->
+<fieldset> <!-- Group form elements -->
+<legend> <!-- Title for fieldset -->
+<datalist> <!-- Autocomplete options -->
+<output> <!-- Output result -->
+<progress> <!-- Progress bar -->
+<meter> <!-- Gauge/measurement -->
+<keygen> <!-- (Deprecated) Key-pair generator -->
+
+<!-- 📷 Media & Graphics -->
+<img> <!-- Image -->
+<audio> <!-- Audio player -->
+<video> <!-- Video player -->
+<source> <!-- Media source -->
+<track> <!-- Subtitles/captions -->
+<canvas> <!-- Drawing/graphics -->
+<map> <!-- Image map -->
+<area> <!-- Clickable area in map -->
+<figure> <!-- Media with caption -->
+<figcaption> <!-- Caption for figure -->
+<object> <!-- Embedded object -->
+<param> <!-- Parameters for <object> -->
+<embed> <!-- External application -->
+<iframe> <!-- Inline frame (embed webpage) -->
+<ruby> <!-- Ruby annotation -->
+<rb> <!-- Base text in ruby -->
+<rt> <!-- Ruby text -->
+<rp> <!-- Fallback parentheses -->
+<rtc> <!-- Ruby text container -->
+
+<!-- 🔗 Links & Navigation -->
+<a href="#"> <!-- Hyperlink -->
+<base> <!-- Base URL for relative links -->
+
+<!-- 📋 Tables -->
+<table> <!-- Table -->
+<thead> <!-- Table header -->
+<tbody> <!-- Table body -->
+<tfoot> <!-- Table footer -->
+<tr> <!-- Table row -->
+<th> <!-- Table header cell -->
+<td> <!-- Table cell -->
+<caption> <!-- Table caption -->
+<col> <!-- Table column -->
+<colgroup> <!-- Group of columns -->
+
+<!-- 🎛 Interactive -->
+<details> <!-- Expandable disclosure -->
+<summary> <!-- Summary for <details> -->
+<dialog> <!-- Dialog box -->
+<script> <!-- JavaScript -->
+<noscript> <!-- No JS fallback -->
+
+</body>
+</html>
+
+<!-- ================================ -->
+<!-- ✅ FULL HTML5 REFERENCE CHEAT SHEET -->
+<!-- ================================ -->
+
+<!DOCTYPE html> <!-- HTML5 declaration -->
+<html lang="en"> <!-- Root element with language -->
+
+<head> <!-- Metadata container -->
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive layout -->
+    <meta name="description" content="Page description for SEO">
+    <meta name="author" content="Author Name">
+    <title>Page Title</title> <!-- Browser tab title -->
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css"> <!-- External CSS -->
+    <style>
+        /* Internal CSS */
+    </style>
+    
+    <!-- Scripts -->
+    <script src="script.js" defer></script> <!-- External JS with defer -->
+</head>
+
+<body> <!-- Main content container -->
+
+<!-- ================================ -->
+<!-- TEXT & TYPOGRAPHY -->
+<!-- ================================ -->
+<h1>Heading 1</h1> <!-- Largest heading -->
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6> <!-- Smallest heading -->
+
+<p>Paragraph text</p> <!-- Standard text block -->
+<span>Inline text container</span>
+<strong>Important / bold semantic</strong>
+<em>Emphasis / italic semantic</em>
+<b>Bold (visual only)</b>
+<i>Italic (visual only)</i>
+<u>Underline text</u>
+<mark>Highlighted text</mark>
+<small>Smaller text</small>
+<sup>Superscript</sup>
+<sub>Subscript</sub>
+<abbr title="Abbreviation">HTML</abbr>
+<q>Inline quote</q>
+<blockquote>Block quote</blockquote>
+<code>Inline code</code>
+<pre>Preformatted text</pre>
+<hr> <!-- Horizontal rule -->
+<br> <!-- Line break -->
+
+<!-- ================================ -->
+<!-- LISTS -->
+<!-- ================================ -->
+<ul> <!-- Unordered list -->
+    <li>List item</li>
+</ul>
+<ol> <!-- Ordered list -->
+    <li>List item</li>
+</ol>
+<dl> <!-- Definition list -->
+    <dt>Term</dt>
+    <dd>Description</dd>
+</dl>
+
+<!-- ================================ -->
+<!-- LINKS & MEDIA -->
+<!-- ================================ -->
+<a href="https://example.com" target="_blank" rel="noopener noreferrer">Link</a> <!-- Hyperlink -->
+<img src="image.jpg" alt="Image description" width="300" height="200"> <!-- Image -->
+<picture> <!-- Responsive image -->
+    <source srcset="image.webp" type="image/webp">
+    <img src="image.jpg" alt="Fallback image">
+</picture>
+<figure> <!-- Media container with caption -->
+    <img src="image.jpg" alt="Image">
+    <figcaption>Caption text</figcaption>
+</figure>
+
+<!-- AUDIO -->
+<audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+    Your browser does not support audio element.
+</audio>
+
+<!-- VIDEO -->
+<video width="320" height="240" controls>
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support video element.
+</video>
+
+<iframe src="https://example.com" width="400" height="300"></iframe> <!-- Embedded webpage -->
+<embed src="file.pdf" width="400" height="300"> <!-- Embedded content -->
+<object data="file.pdf" width="400" height="300"></object> <!-- Alternative embedded content -->
+
+<!-- CANVAS & SVG -->
+<canvas id="myCanvas" width="400" height="400"></canvas> <!-- Draw graphics -->
+<svg width="100" height="100"> <!-- Vector graphics -->
+    <circle cx="50" cy="50" r="40" stroke="black" fill="red"></circle>
+</svg>
+
+<!-- IMAGE MAP -->
+<map name="imagemap">
+    <area shape="rect" coords="0,0,100,100" href="https://example.com" alt="Clickable area">
+</map>
+
+<!-- ================================ -->
+<!-- FORMS & INPUTS -->
+<!-- ================================ -->
+<form action="#" method="POST">
+    <input type="text" placeholder="Text input"><br>
+    <input type="password" placeholder="Password"><br>
+    <input type="email" placeholder="Email"><br>
+    <input type="url" placeholder="Website"><br>
+    <input type="tel" placeholder="Phone"><br>
+    <input type="search" placeholder="Search"><br>
+    <input type="number" min="0" max="10"><br>
+    <input type="date"><br>
+    <input type="datetime-local"><br>
+    <input type="month"><br>
+    <input type="time"><br>
+    <input type="week"><br>
+    <input type="checkbox"> Checkbox<br>
+    <input type="radio" name="demo"> Radio<br>
+    <input type="color"><br>
+    <input type="range" min="0" max="100"><br>
+    <input type="file"><br>
+    <input type="hidden" value="secret"><br>
+    <input type="button" value="Button"><br>
+    <input type="submit" value="Submit"><br>
+    <input type="reset" value="Reset"><br>
+    <textarea placeholder="Multiline text"></textarea><br>
+    <button type="button">Button</button><br>
+    <label for="name">Label</label>
+    <select>
+        <option>Option 1</option>
+        <option>Option 2</option>
+    </select>
+    <optgroup label="Group 1">
+        <option>Option 1</option>
+    </optgroup>
+    <fieldset>
+        <legend>Fieldset Title</legend>
+        <input type="text">
+    </fieldset>
+    <datalist id="data">
+        <option value="Option 1">
+    </datalist>
+    <output name="result">Result</output>
+    <meter value="0.6">60%</meter>
+    <progress value="70" max="100">70%</progress>
+</form>
+
+<!-- ================================ -->
+<!-- TABLES -->
+<!-- ================================ -->
+<table>
+    <caption>Table Title</caption>
+    <colgroup>
+        <col span="2" style="background-color: #eee">
+    </colgroup>
+    <thead>
+        <tr>
+            <th>Header</th>
+            <th>Header</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Data</td>
+            <td>Data</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Footer</td>
+            <td>Footer</td>
+        </tr>
+    </tfoot>
+</table>
+
+<!-- ================================ -->
+<!-- SEMANTIC HTML5 -->
+<!-- ================================ -->
+<header>Page header</header>
+<footer>Page footer</footer>
+<nav>Navigation links</nav>
+<main>Main content</main>
+<article>Independent article</article>
+<section>Grouped section</section>
+<aside>Sidebar content</aside>
+<address>Contact info</address>
+<time datetime="2025-09-09">Date/time</time>
+<details>
+    <summary>Summary title</summary>
+    Content hidden until toggle
+</details>
+<dialog open>Modal dialog</dialog>
+
+<!-- ================================ -->
+<!-- SCRIPTING & TEMPLATES -->
+<!-- ================================ -->
+<script>/* JS code */</script>
+<noscript>Fallback if JS disabled</noscript>
+<template>
+    <div>Hidden template content</div>
+</template>
+<slot></slot> <!-- Web component slot -->
+
+<!-- ================================ -->
+<!-- MISC -->
+<!-- ================================ -->
+<base href="https://example.com/"> <!-- Base URL -->
+<!-- comment --> <!-- HTML comment -->
+
+<!-- ================================ -->
+<!-- ADVANCED HTML5 ELEMENTS -->
+<!-- ================================ -->
+<picture>, <template>, <slot>, <dialog>, <canvas>, <svg>, <meter>, <progress>, <figure>, <figcaption>, <main>, <article>, <section>, <aside>, <address>, <time>, <details>, <summary>
+
+<!-- ================================ -->
+<!-- GLOBAL ATTRIBUTES -->
+<!-- ================================ -->
+<!-- All HTML elements can have: -->
+id, class, style, title, hidden, data-*, tabindex, draggable, contenteditable, spellcheck, aria-*
+
+<!-- ================================ -->
+<!-- EVENT ATTRIBUTES -->
+<!-- ================================ -->
+onclick, onmouseover, onmouseout, onload, onerror, onsubmit, oninput, onchange, onfocus, onblur, onkeydown, onkeyup, onkeypress
+
+<!-- ================================ -->
+<!-- ARIA ROLES (Accessibility) -->
+<!-- ================================ -->
+role="button", role="navigation", role="main", role="banner", role="contentinfo", role="complementary", role="form", role="dialog"
+
+<!-- ================================ -->
+<!-- EMMET SHORTCUTS (Optional) -->
+<!-- ================================ -->
 <!-- CLASS & ID -->
-.box →
-<div class="box"></div>
-#main →
-<div id="main"></div>
-div#app →
-<div id="app"></div>
+.box      → <div class="box"></div>
+#main     → <div id="main"></div>
+div#app   → <div id="app"></div>
 span.item → <span class="item"></span>
 
 <!-- MULTIPLY -->
-div*3 → 3 divs .card*4 → 4 divs with class="card"
+div*3     → 3 divs
+.card*4   → 4 divs with class="card"
 
 <!-- CHILD (>) -->
-div>p →
-<div>
-    <p></p>
-</div>
-ul>li*3 → list with 3 items
+div>p     → <div><p></p></div>
+ul>li*3   → <ul><li></li><li></li><li></li></ul>
 
 <!-- SIBLING (+) -->
-h1+p →
-<h1></h1>
-<p></p>
-div+span →
-<div></div><span></span>
+h1+p      → <h1></h1><p></p>
+div+span  → <div></div><span></span>
 
 <!-- CLIMB UP (^) -->
-div>p>span^a →
-<div>
-    <p><span></span></p>
-    <a></a>
-</div>
+div>p>span^a
+→ <div><p><span></span></p><a></a></div>
 
 <!-- GROUPING ( ) -->
-div>(header>ul>li*2)+footer →
-<div>
-    <header>
-        <ul>
-            <li></li>
-            <li></li>
-        </ul>
-    </header>
-    <footer></footer>
-</div>
+div>(header>ul>li*2)+footer
+→ <div><header><ul><li></li><li></li></ul></header><footer></footer></div>
 
 <!-- NUMBERING ($) -->
-.item$*3 →
-<div class="item1"></div>
-<div class="item2"></div>
-<div class="item3"></div>
-
-ul>li.item$*3 →
-<ul>
-    <li class="item1"></li>
-    <li class="item2"></li>
-    <li class="item3"></li>
-</ul>
+.item$*3
+→ <div class="item1"></div><div class="item2"></div><div class="item3"></div>
 
 <!-- TEXT CONTENT ({}) -->
-a{Click me} → <a href="">Click me</a> p{Hello World} →
-<p>Hello World</p>
+a{Click me} → <a href="">Click me</a>
+p{Hello World} → <p>Hello World</p>
 
 <!-- ATTRIBUTES ([]) -->
-input[type=text] → <input type="text"> img[src=img.jpg alt=photo] → <img src="img.jpg" alt="photo">
+input[type=text] → <input type="text">
+img[src=img.jpg alt=photo] → <img src="img.jpg" alt="photo">
 
 <!-- COMBO EXAMPLES -->
-div>.column*2>.box*2 →
-<div>
-    <div class="column">
-        <div class="box"></div>
-        <div class="box"></div>
-    </div>
-    <div class="column">
-        <div class="box"></div>
-        <div class="box"></div>
-    </div>
-</div>
+div>.column*2>.box*2
+→ <div><div class="column"><div class="box"></div><div class="box"></div></div><div class="column"><div class="box"></div><div class="box"></div></div></div>
 
-<!-- ✅ FULL HTML TAG REFERENCE CHEAT SHEET -->
+<!-- ================================ -->
+<!-- REFERENCES -->
+<!-- ================================ -->
+📖 MDN HTML Reference: https://developer.mozilla.org/en-US/docs/Web/HTML  
+📖 WHATWG HTML Standard: https://html.spec.whatwg.org/
 
-<!-- 🔹 STRUCTURE
-<!DOCTYPE html>   = HTML5 declaration
-<html>           = Root element
-<head>           = Metadata container
-<title>          = Page title (browser tab)
-<meta>           = Metadata (charset, viewport, SEO)
-<link>           = External resource (CSS, favicon)
-<style>          = Internal CSS
-<script>         = JavaScript
-<body>           = Main content container
+</body>
+</html>
 
-🔹 TEXT & CONTENT
-<h1>–<h6>        = Headings
-<p>              = Paragraph
-<span>           = Inline container
-<div>            = Block container
-<strong>         = Important (semantic bold)
-<em>             = Emphasis (semantic italic)
-<b>              = Bold (visual only)
-<i>              = Italic (visual only)
-<u>              = Underline
-<mark>           = Highlighted
-<small>          = Smaller text
-<sup>            = Superscript
-<sub>            = Subscript
-<abbr>           = Abbreviation (with title attr)
-<q>              = Inline quotation
-<blockquote>     = Block quotation
-<code>           = Inline code
-<pre>            = Preformatted text
-<hr>             = Horizontal rule
-<br>             = Line break
+<!-- ============================= -->
+<!-- Deprecated / Obsolete Elements -->
+<!-- For legacy awareness, avoid using in modern HTML -->
+<!-- ============================= -->
+<acronym title="World Wide Web">WWW</acronym> <!-- Use <abbr> instead -->
+<applet code="Applet.class">Applet fallback</applet> <!-- Use <object> or JS instead -->
+<basefont size="3" color="red" face="Arial"> <!-- Font styling, use CSS instead -->
+<center>Centered text</center> <!-- Use CSS: text-align:center; -->
+<dir>Directory list</dir> <!-- Use <ul> instead -->
+<font color="red" size="3" face="Arial">Font styling</font> <!-- Use CSS -->
+<s>Strikethrough text</s> <!-- Use <del> or CSS -->
+<strike>Strikethrough text</strike> <!-- Use <del> or CSS -->
+<u>Underline text</u> <!-- Semantics in HTML5; CSS preferred -->
 
-🔹 LISTS
-<ul>             = Unordered list
-<ol>             = Ordered list
-<li>             = List item
-<dl>             = Definition list
-<dt>             = Definition term
-<dd>             = Definition description
+<!-- ============================= -->
+<!-- Microdata / Metadata / SEO Elements -->
+<!-- Commonly used for search engines & social media previews -->
+<!-- ============================= -->
+<meta name="description" content="Page description"> <!-- SEO description -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobile responsiveness -->
+<meta property="og:title" content="Page Title"> <!-- Open Graph title for social media -->
+<meta property="og:description" content="Page description"> <!-- Open Graph description -->
+<meta property="og:image" content="image.jpg"> <!-- Open Graph thumbnail image -->
+<meta name="twitter:card" content="summary_large_image"> <!-- Twitter card type -->
+<meta name="twitter:title" content="Page Title"> <!-- Twitter card title -->
+<meta name="twitter:description" content="Page description"> <!-- Twitter card description -->
+<meta name="twitter:image" content="image.jpg"> <!-- Twitter card image -->
+<link rel="canonical" href="https://example.com/page-url"> <!-- Prevent duplicate content in SEO -->
 
-🔹 LINKS & MEDIA
-<a>              = Anchor link (href, target)
-<img>            = Image (src, alt)
-<figure>         = Semantic media container
-<figcaption>     = Caption for <figure>
-<video>          = Video player
-<audio>          = Audio player
-<source>         = Media source (inside video/audio)
-<track>          = Subtitles for video/audio
-<iframe>         = Inline frame (embed another page)
-<embed>          = Embed external content
-<object>         = Embed object (PDF, Flash, etc.)
-<canvas>         = Drawing canvas (JS graphics)
-<svg>            = Vector graphics
-<map>            = Image map
-<area>           = Clickable area inside map
+<!-- ============================= -->
+<!-- Common HTML5 APIs (JS-related, for modern interactive web apps) -->
+<!-- ============================= -->
+<!-- Web Storage -->
+<script>
+  localStorage.setItem("theme", "dark");  // Store data locally
+  let theme = localStorage.getItem("theme"); // Retrieve stored data
+</script>
 
-🔹 FORMS
-<form>           = Form container
-<input>          = Input field (text, email, password…)
-<textarea>       = Multiline input
-<button>         = Clickable button
-<label>          = Label for input
-<select>         = Dropdown
-<option>         = Option in dropdown
-<optgroup>       = Grouped options
-<fieldset>       = Group of form fields
-<legend>         = Title for <fieldset>
-<datalist>       = Autocomplete options
-<output>         = Calculation output
-<meter>          = Gauge / measurement
-<progress>       = Progress bar
+<!-- Canvas API -->
+<canvas id="myCanvas" width="200" height="100"></canvas> <!-- For drawing, charts, games -->
 
-🔹 TABLES
-<table>          = Table container
-<caption>        = Table title
-<thead>          = Table header group
-<tbody>          = Table body
-<tfoot>          = Table footer
-<tr>             = Table row
-<th>             = Table header cell
-<td>             = Table data cell
-<colgroup>       = Group of columns
-<col>            = Column properties
+<!-- Geolocation -->
+<script>
+  navigator.geolocation.getCurrentPosition(
+    position => console.log(position.coords.latitude, position.coords.longitude)
+  ); // Get user location
+</script>
 
-🔹 SEMANTIC HTML5
-<header>         = Page/header section
-<footer>         = Footer section
-<nav>            = Navigation
-<main>           = Main content
-<article>        = Independent content
-<section>        = Thematic grouping
-<aside>          = Sidebar / extra content
-<address>        = Contact info
-<time>           = Date/time
-<details>        = Expandable content
-<summary>        = Summary/title for <details>
-<dialog>         = Modal dialog box
+<!-- Drag & Drop -->
+<div draggable="true" ondragstart="console.log('Dragging')">Drag me</div> <!-- Drag & drop support -->
 
-🔹 SCRIPTING
-<script>         = JavaScript
-<noscript>       = Fallback if JS disabled
-<template>       = Hidden HTML template
-<slot>           = Web component slot
+<!-- Web Workers -->
+<script>
+  // Background processing without freezing UI
+  // let worker = new Worker("worker.js");
+</script>
 
-📖 Docs for deep reference:
-MDN HTML Reference
-WHATWG HTML Standard
+<!-- File API -->
+<input type="file" id="fileInput">
+<script>
+  const fileInput = document.getElementById("fileInput");
+  fileInput.addEventListener("change", (e) => {
+    const file = e.target.files[0];
+    console.log(file.name, file.size);
+  });
+</script>
 
-🔹 MISC
-<!-- comment -->= Comment
-<base> = Base URL for links -->

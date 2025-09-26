@@ -1,988 +1,846 @@
-=====================DISPLAY=====================*/ display: block;
-
-/* default: block-level element (full width) */
-
-display: inline;
-
-/* inline element, flows within text */
-
-display: inline-block;
-
-/* inline but accepts width/height */
-
-display: none;
-
-/* removes element from layout and flow */
-
-display: flex;
-
-/* enable flex layout */
-
-display: inline-flex;
-
-/* inline-level flex container */
-
-display: grid;
-
-/* enable grid layout */
-
-display: inline-grid;
-
-/* inline-level grid */
-
-display: contents;
-
-/* element box removed but children remain in flow */
-
-display: list-item;
-
-/* behaves like <li> */
-
-display: table;
-
-/* table layout (CSS table) */
-
-display: inline-table;
-
-/* inline table container */
-
-display: table-row;
-
-/* table row */
-
-display: table-cell;
-
-/* table cell */
-
+/* ===================== DISPLAY ===================== */
+display: block;          /* default: block-level element (full width) */
+display: inline;         /* inline element, flows within text */
+display: inline-block;   /* inline but accepts width/height */
+display: none;           /* removes element from layout and flow */
+display: flex;           /* enable flex layout */
+display: inline-flex;    /* inline-level flex container */
+display: grid;           /* enable grid layout */
+display: inline-grid;    /* inline-level grid */
+display: contents;       /* element box removed but children remain in flow */
+display: list-item;      /* behaves like <li> */
+display: table;          /* table layout (CSS table) */
+display: inline-table;   /* inline table container */
+display: table-row;      /* table row */
+display: table-cell;     /* table cell */
 
 /* ===================== FLEX CONTAINER ===================== */
-
 .flex {
-    display: flex;
-    /* enable flex layout */
-    flex-direction: row;
-    /* row | row-reverse | column | column-reverse */
-    flex-wrap: nowrap;
-    /* nowrap | wrap | wrap-reverse */
-    flex-flow: row nowrap;
-    /* shorthand: flex-direction + flex-wrap */
-    justify-content: flex-start;
-    /* flex-start | flex-end | center | space-between | space-around | space-evenly */
-    align-items: stretch;
-    /* stretch | flex-start | flex-end | center | baseline */
-    align-content: stretch;
-    /* multi-line: flex-start | flex-end | center | space-between | space-around | stretch */
-    gap: 1rem;
-    /* spacing between items (row & column) */
-}
+  display: flex;                   /* enable flex layout */
+  flex-direction: row;             /* row | row-reverse | column | column-reverse */
+  flex-wrap: nowrap;               /* nowrap | wrap | wrap-reverse */
+  flex-flow: row nowrap;           /* shorthand: flex-direction + flex-wrap */
 
+  justify-content: flex-start;     /* flex-start | flex-end | center | space-between | space-around | space-evenly */
+  align-items: stretch;            /* stretch | flex-start | flex-end | center | baseline */
+  align-content: stretch;          /* multi-line: flex-start | flex-end | center | space-between | space-around | stretch */
+
+  gap: 1rem;                       /* spacing between items (row & column) */
+}
 
 /* ===================== FLEX ITEMS ===================== */
-
 .flex-item {
-    order: 0;
-    /* order in flex container */
-    flex: 0 1 auto;
-    /* shorthand: flex-grow, flex-shrink, flex-basis */
-    flex-grow: 0;
-    /* 0 = don’t grow, 1+ = grow */
-    flex-shrink: 1;
-    /* 0 = don’t shrink, 1 = shrink */
-    flex-basis: auto;
-    /* initial main size: auto | % | px | content (rare) */
-    align-self: auto;
-    /* override container align-items per item */
-    min-width: 0;
-    /* prevent overflow when shrinking */
-    min-height: 0;
-    /* prevent overflow when shrinking */
+  order: 0;                        /* order in flex container */
+  flex: 0 1 auto;                  /* shorthand: flex-grow, flex-shrink, flex-basis */
+  flex-grow: 0;                    /* 0 = don’t grow, 1+ = grow */
+  flex-shrink: 1;                  /* 0 = don’t shrink, 1 = shrink */
+  flex-basis: auto;                /* initial main size: auto | % | px | content (rare) */
+  align-self: auto;                /* override container align-items per item */
+  min-width: 0;                    /* prevent overflow when shrinking */
+  min-height: 0;                   /* prevent overflow when shrinking */
 }
-
 
 /* ===================== ADVANCED / RARE FLEX ===================== */
-
 .flex-advanced {
-    flex-wrap: wrap-reverse;
-    /* reverse wrapping order */
-    flex-basis: content;
-    /* size to content (rare, experimental) */
-    align-content: space-around;
-    /* multi-line spacing for nested flex */
-    /* align-content: baseline; uncommon & niche usage */
+  flex-wrap: wrap-reverse;         /* reverse wrapping order */
+  flex-basis: content;             /* size to content (rare, experimental) */
+  align-content: space-around;     /* multi-line spacing for nested flex */
+  /* align-content: baseline; uncommon & niche usage */
 }
-
 
 /* ===================== GRID CONTAINER ===================== */
-
 .grid {
-    display: grid;
-    /* enable grid layout */
-    /* Explicit grid */
-    grid-template-columns: 1fr 2fr;
-    /* column definitions */
-    grid-template-rows: auto auto;
-    /* row definitions */
-    grid-template-areas: "header header" "sidebar main";
-    /* named areas for placement */
-    /* Implicit grid (rare) */
-    grid-auto-columns: auto;
-    /* size for implicit columns */
-    grid-auto-rows: auto;
-    /* size for implicit rows */
-    grid-auto-flow: row;
-    /* row | column | row dense | column dense (dense fills gaps) */
-    gap: 1rem;
-    /* shorthand row + column gap */
-    row-gap: 1rem;
-    column-gap: 1rem;
-    /* Alignment */
-    justify-items: stretch;
-    /* align items in inline direction: start | end | center | stretch */
-    align-items: stretch;
-    /* align items in block direction: start | end | center | stretch */
-    justify-content: start;
-    /* alignment of the whole grid in inline axis */
-    align-content: start;
-    /* alignment of the whole grid in block axis */
-    place-items: center;
-    /* shorthand: align-items + justify-items */
-    place-content: center;
-    /* shorthand: align-content + justify-content */
-}
+  display: grid;                     /* enable grid layout */
 
+  /* Explicit grid */
+  grid-template-columns: 1fr 2fr;    /* column definitions */
+  grid-template-rows: auto auto;     /* row definitions */
+  grid-template-areas:
+    "header header"
+    "sidebar main";                  /* named areas for placement */
+
+  /* Implicit grid (rare) */
+  grid-auto-columns: auto;           /* size for implicit columns */
+  grid-auto-rows: auto;              /* size for implicit rows */
+  grid-auto-flow: row;               /* row | column | row dense | column dense (dense fills gaps) */
+
+  gap: 1rem;                         /* shorthand row + column gap */
+  row-gap: 1rem;                     
+  column-gap: 1rem;
+
+  /* Alignment */
+  justify-items: stretch;            /* align items in inline direction: start | end | center | stretch */
+  align-items: stretch;              /* align items in block direction: start | end | center | stretch */
+  justify-content: start;            /* alignment of the whole grid in inline axis */
+  align-content: start;              /* alignment of the whole grid in block axis */
+  place-items: center;               /* shorthand: align-items + justify-items */
+  place-content: center;             /* shorthand: align-content + justify-content */
+}
 
 /* ===================== GRID ITEMS ===================== */
-
 .grid-item {
-    grid-column: 1 / 3;
-    /* start-line / end-line or span */
-    grid-row: 2 / span 2;
-    /* start-line / span rows */
-    grid-area: header;
-    /* place into named grid area */
-    justify-self: start;
-    /* override container justify-items (start | end | center | stretch) */
-    align-self: start;
-    /* override container align-items */
-    place-self: center;
-    /* shorthand: align-self + justify-self */
-    min-width: 0;
-    /* prevent overflow inside grid cells */
-    min-height: 0;
-}
+  grid-column: 1 / 3;                 /* start-line / end-line or span */
+  grid-row: 2 / span 2;               /* start-line / span rows */
+  grid-area: header;                  /* place into named grid area */
 
+  justify-self: start;                /* override container justify-items (start | end | center | stretch) */
+  align-self: start;                  /* override container align-items */
+  place-self: center;                 /* shorthand: align-self + justify-self */
+
+  min-width: 0;                        /* prevent overflow inside grid cells */
+  min-height: 0;
+}
 
 /* ===================== ADVANCED / RARE GRID ===================== */
-
 .grid-advanced {
-    subgrid: none;
-    /* experimental: inherit parent grid (not widely supported) */
-    grid-auto-flow: dense;
-    /* auto-fill holes in layout */
-    grid-column-start: col1;
-    /* named line placement (requires named lines) */
-    grid-row-start: row2;
-    /* named line placement */
-    grid-template-columns: repeat(3, minmax(100px, 1fr));
-    /* 3 columns, min 100px, flexible 1fr */
-    grid-template-rows: minmax(50px, auto);
+  subgrid: none;                       /* experimental: inherit parent grid (not widely supported) */
+  grid-auto-flow: dense;               /* auto-fill holes in layout */
+  grid-column-start: col1;             /* named line placement (requires named lines) */
+  grid-row-start: row2;                /* named line placement */
+  grid-template-columns: repeat(3, minmax(100px, 1fr)); /* 3 columns, min 100px, flexible 1fr */
+  grid-template-rows: minmax(50px, auto);   
 }
-
-
 /* minmax(50px, auto) -> row height min 50px, grows to fit content */
-
-
 /* subgrid -> inherit grid structure from parent (experimental) */
-
-
 /* grid-auto-flow: dense -> fill gaps automatically in grid layout */
-
-
 /* repeat(3, minmax(100px, 1fr)) -> 3 columns, each min 100px, flexible 1fr max */
 
-
 /* ===================== REM & EM → PX CONVERSION (base = 16px) ===================== */
-
-
 /* quick reference conversions (base 16px) */
+0.25rem / 0.25em = 4px
+0.5rem  / 0.5em  = 8px
+0.75rem / 0.75em = 12px
+1rem    / 1em    = 16px
+1.25rem / 1.25em = 20px
+1.5rem  / 1.5em  = 24px
+1.75rem / 1.75em = 28px
+2rem    / 2em    = 32px
+2.5rem  / 2.5em  = 40px
+3rem    / 3em    = 48px
+3.5rem / 3.5em = 56px
+4rem    / 4em    = 64px
+4.5rem / 4.5em = 72px
+5rem    / 5em    = 80px
+6rem    / 6em    = 96px
+7rem    / 7em    = 112px
+8rem    / 8em    = 128px
+9rem    / 9em    = 144px
+10rem   / 10em   = 160px
 
-0.25rem / 0.25em=4px 0.5rem / 0.5em=8px 0.75rem / 0.75em=12px 1rem / 1em=16px 1.25rem / 1.25em=20px 1.5rem / 1.5em=24px 1.75rem / 1.75em=28px 2rem / 2em=32px 2.5rem / 2.5em=40px 3rem / 3em=48px 3.5rem / 3.5em=56px 4rem / 4em=64px 4.5rem / 4.5em=72px 5rem / 5em=80px 6rem / 6em=96px 7rem / 7em=112px 8rem / 8em=128px 9rem / 9em=144px 10rem / 10em=160px
 /* ===================== CSS SHORTHAND & COMMON EXAMPLES ===================== */
-
-
 /* Margin / Padding / Inset / Border shorthand examples */
+margin: 0 10px 0 10px;                /* top | right | bottom | left */
+padding: 10px 0 10px 0;               /* top | right | bottom | left */
+inset: 0 auto auto 30px;           /* top | right | bottom | left (for positionedelements) */
+inset: 10px; -> all sides
+              inset: 10px 20px;  -> top/bottom | right/left
+              inset: 5px 15px 0; -> top | right/left | bottom
+              inset: 0 auto auto 80px; -> top | right | bottom | left */
 
-margin: 0 10px 0 10px;
+border-right-width: 5px;              /* specific border side width */
+border-width: 0 5px 0 5px;            /* shorthand: top right bottom left */
+border-right-style: none;             /* specific border side style */
+border-style: none none none none;    /* shorthand for all sides */
+border-right-color: black;            /* specific color */
+border-color: red green blue yellow;  /* shorthand top | right | bottom | left */
 
-/* top | right | bottom | left */
+border-left-radius: 5px;              /* specific corner */
+border-radius: 0 5px 0 5px;           /* shorthand: top-left | top-right | bottom-right | bottom-left */
 
-padding: 10px 0 10px 0;
+font-style: italic; font-weight: bold; font-size: 1rem; line-height: 1.5; font-family: serif;
+DO THIS
+SHORTHAND 
+font: italic bold 1rem/1.5 serif;
 
-/* top | right | bottom | left */
-
-inset: 0 auto auto 30px;
-
-/* top | right | bottom | left (for positionedelements) */
-
-inset: 10px;
-->all sides inset: 10px 20px;
-->top/bottom | right/left inset: 5px 15px 0;
-->top | right/left | bottom inset: 0 auto auto 80px;
-->top | right | bottom | left */ border-right-width: 5px;
-
-/* specific border side width */
-
-border-width: 0 5px 0 5px;
-
-/* shorthand: top right bottom left */
-
-border-right-style: none;
-
-/* specific border side style */
-
-border-style: none none none none;
-
-/* shorthand for all sides */
-
-border-right-color: black;
-
-/* specific color */
-
-border-color: red green blue yellow;
-
-/* shorthand top | right | bottom | left */
-
-border-left-radius: 5px;
-
-/* specific corner */
-
-border-radius: 0 5px 0 5px;
-
-/* shorthand: top-left | top-right | bottom-right | bottom-left */
-
-font-style: italic;
-font-weight: bold;
-font-size: 1rem;
-line-height: 1.5;
-font-family: serif;
-DO THIS SHORTHAND font: italic bold 1rem/1.5 serif;
-transition-property: color;
-transition-duration: 2s;
-transition-timing-function: ease;
+transition-property: color; transition-duration: 2s; transition-timing-function: ease; 
 transition-delay: 1s;
-SHORTHAND transition: color 2s ease 1s;
-background-color: #F1F7FE;
-background-image: url("img-png");
-background-repeat: no-repeat;
-background-position: right top;
-SHORTHAND background: #F1F7FE url("img.png") no-repeat right top;
-animation-name: blink-text;
-animation-duration: 2s;
-animation-timing-function: ease;
-animation-delay: 1s;
-animation-iteration-count: infinite;
-animation-direction: alternate;
-animation-fill-mode: both;
-SHORTHAND animation-name: blink-text 2s ease 1s infinite alternate both;
-border-width: 2px;
-border-style: solid;
-border-color: #052A4E;
-SHORTHAND border: 2px solid #052A4E;
-list-style-type: square;
-list-style-position: inside;
-list-style-image: url("jsm.svg");
-SHORTHAND list-style: square inside url("jsm.svg");
+SHORTHAND 
+transition: color 2s ease 1s;
+
+background-color: #F1F7FE; background-image: url("img-png"); background-repeat: no-repeat; background-position: right top;
+SHORTHAND 
+background: #F1F7FE url("img.png") no-repeat right top;
+
+animation-name: blink-text; animation-duration: 2s; animation-timing-function: ease; animation-delay: 1s; animation-iteration-count: infinite; animation-direction: alternate; animation-fill-mode: both;
+SHORTHAND 
+animation-name: blink-text 2s ease 1s infinite alternate both;
+
+border-width: 2px; border-style: solid; border-color: #052A4E;
+SHORTHAND 
+border: 2px solid #052A4E;
+
+list-style-type: square; list-style-position: inside; list-style-image: url("jsm.svg") ;
+SHORTHAND 
+list-style: square inside url("jsm.svg");
 
 /* ===================== POSITION & Z-INDEX ===================== */
-
-position: static;
-
-/* default, in normal flow */
-
-position: relative;
-
-/* positioned, offsets affect layout of child absolute elements */
-
-position: absolute;
-
-/* removed from flow, positioned relative to nearest positioned ancestor */
-
-position: fixed;
-
-/* fixed to viewport */
-
-position: sticky;
-
-/* sticks when crossing threshold (top, bottom, etc.) */
-
-
+position: static;       /* default, in normal flow */
+position: relative;     /* positioned, offsets affect layout of child absolute elements */
+position: absolute;     /* removed from flow, positioned relative to nearest positioned ancestor */
+position: fixed;        /* fixed to viewport */
+position: sticky;       /* sticks when crossing threshold (top, bottom, etc.) */
 /* Note: position: absolute inside position: relative (common pattern) */
 
-z-index: 0;
-
-/* stacking order — lower is behind */
-
-z-index: 1;
-
-/* middle */
-
-z-index: 10;
-
-/* front */
-
+z-index: 0;             /* stacking order — lower is behind */
+z-index: 1;             /* middle */
+z-index: 10;            /* front */
 
 /* ===================== FLOAT ===================== */
-
-
 /* Float allows elements to shift left or right within their container, text wraps around it. */
-
-float: left;
-
-/* element floats to the left, text wraps on the right */
-
-float: right;
-
-/* element floats to the right, text wraps on the left */
-
-float: none;
-
-/* default, element does not float */
-
-float: inline-start;
-
-/* floats to the start edge (left in LTR, right in RTL) */
-
-float: inline-end;
-
-/* floats to the end edge (right in LTR, left in RTL) */
-
+float: left;          /* element floats to the left, text wraps on the right */
+float: right;         /* element floats to the right, text wraps on the left */
+float: none;          /* default, element does not float */
+float: inline-start;  /* floats to the start edge (left in LTR, right in RTL) */
+float: inline-end;    /* floats to the end edge (right in LTR, left in RTL) */
 
 /* Clear prevents elements from wrapping around floated elements */
-
-clear: none;
-
-/* default, allows floating elements on both sides */
-
-clear: left;
-
-/* prevents elements from floating on the left */
-
-clear: right;
-
-/* prevents elements from floating on the right */
-
-clear: both;
-
-/* prevents elements from floating on either side */
-
+clear: none;          /* default, allows floating elements on both sides */
+clear: left;          /* prevents elements from floating on the left */
+clear: right;         /* prevents elements from floating on the right */
+clear: both;          /* prevents elements from floating on either side */
 
 /* ===================== DISPLAY (quick ref reminders) ===================== */
-
-display: block;
-
-/* full width box, new line */
-
-display: inline;
-
-/* inline within text */
-
-display: inline-block;
-
-/* inline but box-like */
-
-display: none;
-
-/* hidden, removed from layout */
-
-display: flex;
-
-/* flex layout */
-
-display: grid;
-
-/* grid layout */
-
+display: block;         /* full width box, new line */
+display: inline;        /* inline within text */
+display: inline-block;  /* inline but box-like */
+display: none;          /* hidden, removed from layout */
+display: flex;          /* flex layout */
+display: grid;          /* grid layout */
 
 /* ===================== FLEXBOX QUICK VALUES (ref) ===================== */
+justify-content: flex-start;     /* items left/start */
+justify-content: center;         /* items center */
+justify-content: flex-end;       /* items right/end */
+justify-content: space-between;  /* space between items */
+justify-content: space-around;   /* space around each item */
+justify-content: space-evenly;   /* equal spacing between items */
 
-justify-content: flex-start;
+align-items: flex-start;         /* top */
+align-items: center;             /* center */
+align-items: flex-end;           /* bottom */
+align-items: stretch;            /* stretch to fill cross axis */
+align-items: baseline;           /* align on text baseline */
 
-/* items left/start */
+flex-direction: row;             /* default horizontal layout */
+flex-direction: row-reverse;     /* reversed horizontal */
+flex-direction: column;          /* vertical layout */
+flex-direction: column-reverse;  /* reverse vertical */
 
-justify-content: center;
+flex-wrap: nowrap;               /* single line */
+flex-wrap: wrap;                 /* wrap to next line(s) */
+flex-wrap: wrap-reverse;         /* wrap in reverse order */
 
-/* items center */
+align-content: flex-start;       /* top lines */
+align-content: center;           /* center lines */
+align-content: flex-end;         /* bottom lines */
+align-content: space-between;    /* space between lines */
+align-content: space-around;     /* space around lines */
+align-content: space-evenly;     /* equal spacing */
+align-content: stretch;          /* stretch lines across container */
 
-justify-content: flex-end;
-
-/* items right/end */
-
-justify-content: space-between;
-
-/* space between items */
-
-justify-content: space-around;
-
-/* space around each item */
-
-justify-content: space-evenly;
-
-/* equal spacing between items */
-
-align-items: flex-start;
-
-/* top */
-
-align-items: center;
-
-/* center */
-
-align-items: flex-end;
-
-/* bottom */
-
-align-items: stretch;
-
-/* stretch to fill cross axis */
-
-align-items: baseline;
-
-/* align on text baseline */
-
-flex-direction: row;
-
-/* default horizontal layout */
-
-flex-direction: row-reverse;
-
-/* reversed horizontal */
-
-flex-direction: column;
-
-/* vertical layout */
-
-flex-direction: column-reverse;
-
-/* reverse vertical */
-
-flex-wrap: nowrap;
-
-/* single line */
-
-flex-wrap: wrap;
-
-/* wrap to next line(s) */
-
-flex-wrap: wrap-reverse;
-
-/* wrap in reverse order */
-
-align-content: flex-start;
-
-/* top lines */
-
-align-content: center;
-
-/* center lines */
-
-align-content: flex-end;
-
-/* bottom lines */
-
-align-content: space-between;
-
-/* space between lines */
-
-align-content: space-around;
-
-/* space around lines */
-
-align-content: space-evenly;
-
-/* equal spacing */
-
-align-content: stretch;
-
-/* stretch lines across container */
-
-gap: 10px;
-
-/* space between items (row+col) */
-
-row-gap: 10px;
-
-/* vertical gap */
-
-column-gap: 10px;
-
-/* horizontal gap */
-
+gap: 10px;                       /* space between items (row+col) */
+row-gap: 10px;                   /* vertical gap */
+column-gap: 10px;                /* horizontal gap */
 
 /* ===================== GRID QUICK VALUES (ref) ===================== */
+grid-template-columns: 1fr 1fr 1fr;  /* three equal columns */
+grid-template-rows: auto auto;        /* two auto rows */
+grid-template-columns: repeat(3, 1fr); /* repeat helper */
+grid-template-rows: repeat(2, 200px);  /* two fixed rows */
+grid-column: 1 / 3;              /* span two columns */
+grid-row: 1 / 3;                 /* span two rows */
 
-grid-template-columns: 1fr 1fr 1fr;
+place-items: center;             /* shorthand: align-items + justify-items */
+place-items: start;              
+place-items: end;                
+place-items: stretch;            
 
-/* three equal columns */
-
-grid-template-rows: auto auto;
-
-/* two auto rows */
-
-grid-template-columns: repeat(3,
-1fr);
-
-/* repeat helper */
-
-grid-template-rows: repeat(2,
-200px);
-
-/* two fixed rows */
-
-grid-column: 1 / 3;
-
-/* span two columns */
-
-grid-row: 1 / 3;
-
-/* span two rows */
-
-place-items: center;
-
-/* shorthand: align-items + justify-items */
-
-place-items: start;
-place-items: end;
-place-items: stretch;
-place-content: center;
-
-/* align-content + justify-content center */
-
-place-content: space-between;
-
-/* align-content + justify-content space-between */
-
+place-content: center;           /* align-content + justify-content center */
+place-content: space-between;    /* align-content + justify-content space-between */
 
 /* ===================== BOX-SHADOW (examples) ===================== */
-
-box-shadow: 3px 4px 6px rgba(0,
-0,
-0,
-0.2);
-
-/* x y blur color */
-
-.shadow-all {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-
-/* even glow around */
-
-.shadow-card {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-}
-
-
-/* card lift */
-
+box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.2); /* x y blur color */
+.shadow-all { box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }       /* even glow around */
+.shadow-card { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); }   /* card lift */
 .shadow-sides {
-    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.15), /* right */
-    -5px 0 10px rgba(0, 0, 0, 0.15), /* left */
-    0 5px 10px rgba(0, 0, 0, 0.2), /* bottom */
-    0 -5px 10px rgba(0, 0, 0, 0.1);
-    /* top */
+  box-shadow:
+    5px 0 10px rgba(0, 0, 0, 0.15),   /* right */
+   -5px 0 10px rgba(0, 0, 0, 0.15),   /* left */
+    0 5px 10px rgba(0, 0, 0, 0.2),    /* bottom */
+    0 -5px 10px rgba(0, 0, 0, 0.1);   /* top */
 }
-
-.shadow-strong {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
-}
-
-
-/* heavy shadow (pressed look) */
-
+.shadow-strong { box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35); } /* heavy shadow (pressed look) */
 
 /* ===================== TRANSFORMS (hover examples) ===================== */
-
-
 /* Corrected hover selector syntax while keeping original intent */
-
-.form:active {
-    transform: translateY(2px);
-}
-
-
-/* active: move down 2px */
-
-.translateX:hover {
-    transform: translateX(100px);
-}
-
-
-/* move horizontally on hover */
-
-.scaleX:hover {
-    transform: scaleX(1.5);
-}
-
-
-/* scale horizontally on hover */
-
-.scale:hover {
-    transform: scale(1.3);
-}
-
-
-/* uniform scale on hover */
-
-.rotate:hover {
-    transform: rotate(360deg);
-}
-
-
-/* 2D rotation */
-
-.rotateX:hover {
-    transform: rotateX(360deg);
-}
-
-
-/* 3D rotate X */
-
-.rotateY:hover {
-    transform: rotateY(360deg);
-}
-
-
-/* 3D rotate Y */
-
+.form:active { transform: translateY(2px); } /* active: move down 2px */
+.translateX:hover { transform: translateX(100px); } /* move horizontally on hover */
+.scaleX:hover { transform: scaleX(1.5); }   /* scale horizontally on hover */
+.scale:hover { transform: scale(1.3); }     /* uniform scale on hover */
+.rotate:hover { transform: rotate(360deg); }/* 2D rotation */
+.rotateX:hover { transform: rotateX(360deg); } /* 3D rotate X */
+.rotateY:hover { transform: rotateY(360deg); } /* 3D rotate Y */
 
 /* translateY(2px) -> move element 2px down  -2px up*/
-
-
 /* translateX(2px) -> move element 2px right -2px left*/
-
-
 /* translateZ(2px) -> move element toward viewer (3D) */
 
-
 /* ===================== FONT (shorthand & examples) ===================== */
-
-
 /* shorthand format: font: [style] [variant] [weight] [size]/[line-height] [family]; */
-
-font: italic 600 20px/1 serif;
-
-/* example: italic weight 600, size 20px, line-height 1, serif family */
-
-font: normal 400 14px/1.6 'Helvetica',
-sans-serif;
+font: italic 600 20px/1 serif;  /* example: italic weight 600, size 20px, line-height 1, serif family */
+font: normal 400 14px/1.6 'Helvetica', sans-serif;
 font: bold 18px/1.2 Arial;
 font: italic small-caps bold 16px/1.4 Georgia;
 
 /* ===================== TRANSITION (shorthand) ===================== */
+transition: color 1s ease-in-out 0s;            /* property | duration | timing-function | delay */
+transition: all 0.3s ease-in-out;               /* common full shorthand */
 
-transition: color 1s ease-in-out 0s;
-
-/* property | duration | timing-function | delay */
-
-transition: all 0.3s ease-in-out;
-
-/* common full shorthand */
-
-transition-property: opacity,
-transform;
-
-/* Only animate opacity and transform */
-
-transition-duration: 0.5s;
-
-/* Animation will last 0.5 seconds */
-
-transition-timing-function: ease-in;
-
-/* Starts slowly, then speeds up */
-
-transition: opacity 0.5s ease-in,
-transform 0.5s ease-in;
-
-/* shorthand */
-
+transition-property: opacity, transform;  /* Only animate opacity and transform */
+transition-duration: 0.5s;   /* Animation will last 0.5 seconds */
+transition-timing-function: ease-in;    /* Starts slowly, then speeds up */
+transition: opacity 0.5s ease-in, transform 0.5s ease-in;  /* shorthand */ 
 
 /* ===================== OUTLINE (shorthand) ===================== */
-
-outline: 2px dashed red;
-
-/* shorthand: width style color */
-
-
+outline: 2px dashed red; /* shorthand: width style color */
 /* outline expands outside border and doesn't affect layout (unlike border) */
 
-
 /* ===================== MARGIN / PADDING SHORTHAND (examples) ===================== */
-
-
 /* margin: top right bottom left */
-
-margin: 10px 20px;
-
-/* top/bottom:10px | left/right:20px */
-
-padding: 10px 20px 5px;
-
-/* top | left-right | bottom */
-
-padding: 2px 3px 2px 3px;
-
-/* explicit top right bottom left */
-
+margin: 10px 20px; /* top/bottom:10px | left/right:20px */
+padding: 10px 20px 5px; /* top | left-right | bottom */
+padding: 2px 3px 2px 3px; /* explicit top right bottom left */
 
 /* ===================== BORDER & RADIUS ===================== */
-
-border: 1px solid #000;
-
-/* width style color */
-
-border-radius: 8px 4px;
-
-/* corner radii shorthand */
-
-border-style: dashed solid dotted double;
-
-/* multiple styles example */
-
-border-width: 2px 4px;
-
-/* top/bottom 2px, left/right 4px */
-
-border-color: red blue;
-
-/* top/bottom: red, left/right: blue */
-
+border: 1px solid #000; /* width style color */
+border-radius: 8px 4px; /* corner radii shorthand */
+border-style: dashed solid dotted double; /* multiple styles example */
+border-width: 2px 4px; /* top/bottom 2px, left/right 4px */
+border-color: red blue; /* top/bottom: red, left/right: blue */
 
 /* ===================== BOX SHADOW (shorthand example) ===================== */
-
-box-shadow: inset 0 2px 5px rgba(0,
-0,
-0,
-0.3);
-
-/* inset shadow inside element */
-
+box-shadow: inset 0 2px 5px rgba(0,0,0,0.3); /* inset shadow inside element */
 
 /* ===================== BACKGROUND (shorthand & extras) ===================== */
-
-background: #000 url('img.jpg') no-repeat center/cover;
-
-/* color image repeat position/size shorthand */
-
-background-clip: content-box;
-
-/* where background is painted: border-box | padding-box | content-box */
-
-background-attachment: fixed;
-
-/* scroll | fixed | local */
-
-background-origin: border-box;
-
-/* where background starts (border, padding, content) */
-
+background: #000 url('img.jpg') no-repeat center/cover; /* color image repeat position/size shorthand */
+background-clip: content-box;    /* where background is painted: border-box | padding-box | content-box */
+background-attachment: fixed;    /* scroll | fixed | local */
+background-origin: border-box;   /* where background starts (border, padding, content) */
 
 /* ===================== TEXT (decoration & overflow) ===================== */
-
-text-decoration: none underline wavy red;
-
-/* line | style | color */
-
+text-decoration: none underline wavy red; /* line | style | color */
 text-align: center;
 text-transform: uppercase;
-text-overflow: ellipsis;
-
-/* show … for overflowed text */
-
-white-space: nowrap;
-
-/* prevent wrapping  */
-
-word-wrap: break-word;
-
-/* break long words */
-
+text-overflow: ellipsis;         /* show … for overflowed text */
+white-space: nowrap;            /* prevent wrapping  */
+word-wrap: break-word;           /* break long words */
 word-spacing: 5px;
-letter-spacing: 2px line-height: 1.6;
+letter-spacing: 2px
+line-height: 1.6;
 
 /* ===================== LIST STYLE ===================== */
-
-list-style: square inside;
-
-/* shorthand: type position image */
-
+list-style: square inside; /* shorthand: type position image */
 list-style-type: square;
 list-style-position: inside;
 list-style-image: url('dot.png');
 
 /* ===================== FLEX / GRID SHORTHAND (reminder) ===================== */
+flex: 1 0 auto; /* grow shrink basis */
+flex-flow: row wrap; /* direction + wrap shorthand */
 
-flex: 1 0 auto;
-
-/* grow shrink basis */
-
-flex-flow: row wrap;
-
-/* direction + wrap shorthand */
-
-grid: auto / auto;
-
-/* rows / columns shorthand */
-
-grid-template: 1fr 1fr / 1fr 2fr;
-
-/* rows / columns shorthand */
-
+grid: auto / auto; /* rows / columns shorthand */
+grid-template: 1fr 1fr / 1fr 2fr; /* rows / columns shorthand */
 
 /* ===================== ANIMATION (shorthand & keys) ===================== */
-
 @keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
 }
-
-animation: slideIn 1s ease-in-out infinite;
-
-/* name duration timing- fn iteration-count */
-
+animation: slideIn 1s ease-in-out infinite; /* name duration timing- fn iteration-count */
 
 /* ===================== OVERFLOW (shorthand examples) ===================== */
-
-overflow: hidden auto;
-
-/* shorthand not typical: prefer overflow-x & overflow-y */
-
+overflow: hidden auto; /* shorthand not typical: prefer overflow-x & overflow-y */
 overflow-x: hidden;
 overflow-y: auto;
 
 /* ===================== COLUMNS (multi-column layout) ===================== */
-
-columns: 200px 2;
-
-/* column-width column-count shorthand */
-
+columns: 200px 2; /* column-width column-count shorthand */
 column-count: 2;
 column-gap: 1rem;
 
 /* ===================== OBJECT-FIT (media) ===================== */
-
-object-fit: cover;
-
-/* fill container, may crop */
-
-object-fit: contain;
-
-/* fit inside, no crop */
-
+object-fit: cover;   /* fill container, may crop */
+object-fit: contain; /* fit inside, no crop */
 object-fit: none;
 object-fit: scale-down;
-object-position: center top;
-
-/* control image alignment within container */
-
+object-position: center top; /* control image alignment within container */
 
 /* ===================== UTILITY CLASS EXAMPLES ===================== */
-
-
 /* quick utility naming examples you can adopt */
-
-.m-1=margin: 10px;
-
-/* shorthand mapping example (not valid CSS — concept) */
-
-.mt-1=margin-top: 10px;
-.mb-1=margin-bottom: 10px;
-.p-1=padding: 10px;
-.text-center {
-    text-align: center;
-}
-
-.w-100 {
-    width: 100%;
-}
-
-.h-100 {
-    height: 100%;
-}
-
-.d-flex {
-    display: flex;
-}
-
-.d-grid {
-    display: grid;
-}
-
-.hidden {
-    display: none;
-}
-
+.m-1        = margin: 10px;      /* shorthand mapping example (not valid CSS — concept) */
+.mt-1       = margin-top: 10px;
+.mb-1       = margin-bottom: 10px;
+.p-1        = padding: 10px;
+.text-center { text-align: center; }
+.w-100 { width: 100%; }
+.h-100 { height: 100%; }
+.d-flex { display: flex; }
+.d-grid { display: grid; }
+.hidden { display: none; }
 
 /* ===================== BASE / ASSETS PATH EXAMPLE ===================== */
-
-
 /* <base href="images/"> - Makes all relative image paths resolve from /images/ folder */
 
-
 /* ===================== COLORS & OPACITY ===================== */
-
-color: red;
-
-/* text color */
-
-background-color: #f5f5f5;
-
-/* background fill */
-
-opacity: 0.5;
-
-/* transparency (0=hidden, 1=visible) */
-
+color: red;                      /* text color */
+background-color: #f5f5f5;       /* background fill */
+opacity: 0.5;                    /* transparency (0=hidden, 1=visible) */
 
 /* ===================== DIMENSIONS (extras) ===================== */
+width: 100px;                    /* fixed width */
+height: 200px;                   /* fixed height */
+min-width: 300px;                /* minimum width */
+max-width: 1200px;               /* maximum width */
+min-height: 100px;               /* minimum height */
+max-height: 500px;               /* maximum height */
+aspect-ratio: 16/9;              /* modern browsers: lock ratio  widescreen rectangle */
+aspect-ratio: 1 / 1;             /* width and height are always equal  square */
+aspect-ratio: 4 / 3;             /* old TV aspect/format */
 
-width: 100px;
+/* ===================== CSS SELECTOR ===================== */
 
-/* fixed width */
+/* 1. Universal Selector (*) → all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
 
-height: 200px;
+/* 2. Type Selector → all elements of a specific type */
+p {
+  color: blue; /* all <p> tags */
+}
 
-/* fixed height */
+/* 3. Class Selector (.) → elements with a specific class */
+.button {
+  background: red; /* all elements with class="button" */
+}
 
-min-width: 300px;
+/* 4. ID Selector (#) → single element with a specific ID */
+#header {
+  font-size: 24px; /* element with id="header" */
+}
 
-/* minimum width */
+/* 5. Grouping Selector (,) → apply styles to multiple selectors */
+h1, h2, h3 {
+  font-family: Arial; /* all h1, h2, h3 */
+}
 
-max-width: 1200px;
+/* 6. Descendant Selector (space) → elements inside another element */
+div p {
+  color: green; /* <p> inside <div> */
+}
 
-/* maximum width */
+/* 7. Child Selector (>) → direct children only */
+ul > li {
+  list-style: none; /* only direct <li> children of <ul> */
+}
 
-min-height: 100px;
+/* 8. Adjacent Sibling Selector (+) → immediately after another element */
+h1 + p {
+  margin-top: 0; /* first <p> after <h1> */
+}
 
-/* minimum height */
+/* 9. General Sibling Selector (~) → all siblings after an element */
+h1 ~ p {
+  color: gray; /* all <p> after <h1> */
+}
 
-max-height: 500px;
+/* 10. Attribute Selector ([]) → elements with specific attributes */
+input[type="text"] {
+  border: 1px solid black;
+}
 
-/* maximum height */
+/* 11. Pseudo-classes (:) → elements in a special state */
+a:hover {
+  color: red; /* mouse hover state */
+}
+li:first-child {
+  font-weight: bold; /* first <li> */
+}
 
-aspect-ratio: 16/9;
+/* 12. Pseudo-elements (::) → part of an element */
+p::first-letter {
+  font-size: 2em;
+  color: blue; /* first letter of <p> */
+}
 
-/* modern browsers: lock ratio  widescreen rectangle */
+/* ==================CSS Transition Timing Function================== */ 
+transition: background-color 0.15s ease, box-shadow 0.15s ease;
+   
+linear       – same speed start to end (robotic)
+   ease         – slow start & end, fast middle (natural)
+   ease-in      – slow start, fast end
+   ease-out     – fast start, slow end
+   ease-in-out  – slow start & end, fast middle (smooth)
+   cubic-bezier – custom speed control (advanced)
+   steps(n)     – jumps in n steps (typewriter or sprite effect)
 
-aspect-ratio: 1 / 1;
+/* ===================== MARKUP EXAMPLE ===================== */
+<body>
+  <div class="container"> /* container can use p-1, grid or flex utilities */
+    <img src="img1.jpg" alt="">
+    <img src="img2.jpg" alt="">
+    <img src="img3.jpg" alt="">
+    <img src="img4.jpg" alt="">
+  </div>
+</body>
 
-/* width and height are always equal  square */
+/* ===================== BACKGROUND EXTRAS ===================== */
+background-clip: content-box;    /* where bg is painted */
+background-attachment: fixed;    /* background scroll vs fixed */
+background-origin: border-box;   /* where background positioning starts */
 
-aspect-ratio: 4 / 3;
+/* ===================== BORDER EXTRAS ===================== */
+border-style: dashed solid dotted double;
+border-collapse: collapse;       /* for tables */
+border-spacing: 5px;             /* spacing between table cells */
 
-/* old TV aspect/format
+/* ===================== CURSOR & POINTER ===================== */
+cursor: pointer;                 /* pointer for clickable */
+cursor: not-allowed;             /* disabled state */
+cursor: grab;                    /* draggable cursor */
+
+/* ===================== FILTERS & EFFECTS ===================== */
+filter: blur(5px);               /* blur filter */
+filter: brightness(1.2);         /* increase brightness */
+filter: grayscale(100%);         /* black & white */
+filter: drop-shadow(2px 4px 6px black); /* drop shadow filter */
+
+/* ===================== CLIP & MASK ===================== */
+clip-path: circle(50%);          /* cropping shape */
+mask-image: url(mask.svg);       /* image mask (advanced) */
+
+/* ===================== TRANSFORMS (3D & EXTRA) ===================== */
+transform: rotate(45deg);        /* rotate element */
+transform: scale(1.2);           /* scale (zoom) */
+transform: skew(20deg, 10deg);   /* skew */
+transform-style: preserve-3d;    /* for nested 3D transforms */
+perspective: 1000px;             /* 3D depth context */
+backface-visibility: hidden;     /* hide back face when rotated */
+
+/* ===================== SCROLLING ===================== */
+overflow-x: auto;                /* horizontal scroll when needed */
+overflow-y: scroll;              /* always show vertical scroll */
+scroll-behavior: smooth;         /* smooth programmatic scroll */
+scroll-snap-type: x mandatory;   /* snap scrolling container */
+scroll-snap-align: start;        /* snap position for child */
+
+/* ===================== TRANSITIONS & ANIMATIONS EXTRAS ===================== */
+will-change: transform, opacity; /* hint browser for optimization */
+transform-origin: center top;    /* pivot point for transforms */
+animation-fill-mode: forwards;   /* retain end state after animation */
+animation-delay: 0.5s;           /* delay before animation starts */
+animation-direction: alternate;  /* alternate forward/backwards */
+
+/* ===================== MEDIA & RESPONSIVE ==================== */
+
+/* ───────────────────────────── */
+/* ✅ Base Responsive Container */
+/* Makes layout responsive and centered */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ───────────────────────────── */
+/* ✅ Responsive Image */
+/* Scales image to fit container without distortion */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ───────────────────────────── */
+/* ✅ Responsive Typography */
+/* Scales font size between min and max values */
+h1 {
+  font-size: clamp(24px, 4vw, 36px);
+}
+
+/* ✅ clamp() REVERSE CHEAT SHEET */
+
+🎯 Syntax: clamp(MIN, PREFERRED, MAX)
+
+- MIN = the smallest allowed size
+- PREFERRED = usually uses vw/vh for scaling
+- MAX = the largest allowed size
+
+/* 🔤 Responsive Font Size */
+font-size: clamp(14px, 2vw, 18px); 
+/* → Grows from 14px (mobile) to 18px (desktop) */
+
+/* 📦 Responsive Padding */
+padding: clamp(8px, 2vw, 20px);
+/* → Starts small, grows with screen width */
+
+/* 📏 Responsive Width */
+width: clamp(200px, 50vw, 600px);
+/* → Never smaller than 200px, never wider than 600px */
+
+/* 👤 Responsive Avatar/Profile Image */
+width: clamp(30px, 4vw, 50px);
+/* → Scales between 30px and 50px smoothly */
+
+/* 🧱 Responsive Grid Item Height */
+height: clamp(150px, 25vh, 300px);
+/* → Useful for cards/videos based on viewport height */
+
+/* ✍️ Responsive Line Height */
+line-height: clamp(1.2, 2vw, 1.6);
+/* → Keeps text readable at different sizes */
+
+/* ✅ TIP: Use rem/em instead of px for better scaling */
+font-size: clamp(0.875rem, 2vw, 1.25rem);
+
+/* ───────────────────────────── */
+/* ✅ Flexbox Layout */
+/* Allows wrapping and spacing */
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* ───────────────────────────── */
+/* ✅ Responsive Grid */
+/* Auto-fits columns based on screen size */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* ───────────────────────────── */
+/* ✅ Utility Classes */
+
+/* Hide on mobile */
+.hide-mobile {
+  display: block;
+}
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none;
+  }
+}
+
+/* Show only on mobile */
+.show-mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .show-mobile {
+    display: block;
+  }
+}
+
+/* ───────────────────────────── */
+/* ✅ Media Queries Explained */
+
+/* @media (max-width: Xpx) → styles apply to screen widths BELOW X */
+/* @media (min-width: Xpx) → styles apply to screen widths ABOVE X */
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .flex-row {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1025px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+//* 📱 MEDIA QUERIES & RESPONSIVE DESIGN CHEAT SHEET *//
+
+/* 🔹 MOBILE-FIRST BREAKPOINTS (Common Sizes) */
+
+/* Extra small devices (phones, <600px) */
+@media (max-width: 599px) {
+  /* Styles for phones */
+}
+
+/* Small devices (phones landscape, 600px – 767px) */
+@media (min-width: 600px) and (max-width: 767px) {
+  /* Styles for small phones */
+}
+
+/* Medium devices (tablets, 768px – 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Styles for tablets */
+}
+
+/* Large devices (laptops/desktops, 1025px – 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  /* Styles for laptops */
+}
+
+/* Extra large devices (desktops, >1440px) */
+@media (min-width: 1441px) {
+  /* Styles for large screens */
+}
+
+/* 🔹 TARGETING ONLY ONE RANGE (NOT COMBINED) */
+
+/* Only small screens */
+@media (max-width: 768px) {
+  /* Mobile styles */
+}
+
+/* Only medium and up */
+@media (min-width: 769px) {
+  /* Tablet and desktop styles */
+}
+
+/* Only desktop */
+@media (min-width: 1025px) {
+  /* Desktop styles */
+}
+
+/* 🔹 ORIENTATION (LANDSCAPE / PORTRAIT) */
+
+/* Landscape mode */
+@media (orientation: landscape) {
+  /* Styles for landscape mode */
+}
+
+/* Portrait mode */
+@media (orientation: portrait) {
+  /* Styles for portrait mode */
+}
+
+/* 🔹 ASPECT RATIO */
+
+/* Very wide screens */
+@media (min-aspect-ratio: 16/9) {
+  /* Styles for wide screens */
+}
+
+/* Tall screens */
+@media (max-aspect-ratio: 3/4) {
+  /* Styles for tall/narrow screens */
+}
+
+/* 🔹 HIGH RESOLUTION (Retina / HiDPI) */
+@media (-webkit-min-device-pixel-ratio: 2), 
+       (min-resolution: 192dpi) {
+  /* High-resolution (Retina) screens */
+}
+
+/* 🔹 USER PREFERENCES */
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111;
+    color: white;
+  }
+}
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: white;
+    color: black;
+  }
+}
+
+/* User prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* 🔹 PRINT STYLES */
+@media print {
+  body {
+    background: white;
+    color: black;
+    font-size: 12pt;
+  }
+
+  .no-print {
+    display: none;
+  }
+}
+
+/* 🔹 CUSTOM MEDIA FEATURES (Newer browsers) */
+@media (prefers-contrast: more) {
+  /* Higher contrast styles */
+}
+
+//* ✅ Key Concepts (for reference) *//
+
+✔ @media (max-width: Xpx) → styles apply to screen widths below X.
+✔ @media (min-width: Xpx) → styles apply to screen widths above X.
+✔ Use clamp(min, preferred, max) for responsive font sizes.
+✔ Combine flex, grid, and media queries for responsive layout.
+✔ Use utility classes like .hide-mobile / .show-mobile for visibility control.
+✔ Use rem, em, %, vw, and vh units instead of px for scalable design.
+
+/* ===================== CSS VARIABLES (CUSTOM PROPERTIES) ===================== */
+:root {
+  --main-color: #3498db; /* primary theme color */
+  --spacing: 10px;       /* spacing token */
+}
+.box {
+  color: var(--main-color);
+  margin: var(--spacing);
+}
+
+/* ===================== POINTER EVENTS & USER SELECT ===================== */
+pointer-events: none;            /* disable mouse interactions */
+user-select: none;               /* prevent text selection */
+
+/* ===================== VISIBILITY ===================== */
+visibility: hidden;              /* hidden but keeps layout space */
+display: none;                   /* hidden, removes from layout (duplicate intentionally preserved once) */
+
+/* ===================== OBJECT & MEDIA QUERIES ===================== */
+object-position: center top;     /* control image/video focal point */
+aspect-ratio: 4/3;               /* responsive media ratio example */
+
+/* ===================== MISCELLANEOUS ===================== */
+isolation: isolate;              /* create new stacking context */
+mix-blend-mode: multiply;        /* blend element with background */
+backdrop-filter: blur(10px);     /* glassmorphism: blur background behind element */
+
+/* ===================== PLACEHOLDER STYLING ===================== */
+.search::placeholder {            /* style placeholder text inside inputs */
+  font-family: Arial;
+  font-size: 1rem;
+}
+
+/* ===================== UTILITY / QUICK NOTES ===================== */
+/* Use utility classes to speed dev; adapt naming conventions to your project */
+/* Keep accessibility & semantic HTML in mind (ARIA, focus states, contrast, keyboard nav) */
+
+/* ===================== END OF CHEAT SHEET ===================== */

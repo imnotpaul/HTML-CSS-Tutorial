@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Hover Effects Cheat Sheet</title>
+    <style>
+        body {
+            background: #0d0d0d;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            height: 100vh;
+        }
+        /* Base button */
+        
+        .btn {
+            position: relative;
+            padding: 15px 40px;
+            border: 2px solid #fff;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+        /* ========== 1. Neon Glow ========== */
+        
+        .fx-neon:hover {
+            background: #39FF14;
+            color: #000;
+            box-shadow: 0 0 20px #39FF14, 0 0 40px #39FF14, 0 0 60px #39FF14;
+        }
+        /* ========== 2. Color Fill ========== */
+        
+        .fx-fill::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: #00cfff;
+            z-index: -1;
+            transition: width 0.4s ease;
+        }
+        
+        .fx-fill:hover::before {
+            width: 100%;
+        }
+        /* ========== 3. Shake ========== */
+        
+        @keyframes shake {
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+            20%,
+            60% {
+                transform: translateX(-8px);
+            }
+            40%,
+            80% {
+                transform: translateX(8px);
+            }
+        }
+        
+        .fx-shake:hover {
+            animation: shake 0.5s;
+        }
+        /* ========== 4. Flip ========== */
+        
+        .fx-flip {
+            perspective: 600px;
+        }
+        
+        .fx-flip:hover {
+            transform: rotateY(180deg);
+            transition: transform 0.6s;
+        }
+        /* ========== 5. Magnetic ========== */
+        
+        .fx-magnet:hover {
+            transform: scale(1.1);
+        }
+        /* ========== 6. Strobe ========== */
+        
+        @keyframes strobe {
+            0%,
+            49% {
+                background: #ff0099;
+                color: #fff;
+            }
+            50%,
+            100% {
+                background: #fff;
+                color: #ff0099;
+            }
+        }
+        
+        .fx-strobe:hover {
+            animation: strobe 0.3s infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn fx-neon">Neon Glow</button>
+    <button class="btn fx-fill">Color Fill</button>
+    <button class="btn fx-shake">Shake</button>
+    <button class="btn fx-flip">Flip Me</button>
+    <button class="btn fx-magnet">Magnetic</button>
+    <button class="btn fx-strobe">Strobe</button>
+</body>
+
+</html>
